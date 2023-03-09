@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity31"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/nazad"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/strelka"
+            />
+
+        <TextView
+            android:layout_width="309dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="35dp"
+            android:text="Создание словаря"
+            android:textSize="35sp"
+            android:textColor="#000000"
+            android:gravity="center_horizontal|top"
+            android:textStyle="bold"
+
+            />
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="450dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            android:background="@drawable/bigblok"
+
+            >
+
+            <TextView
+                android:id="@+id/nazvslov"
+                android:layout_width="340dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/ubuntu"
+                android:lineHeight="29sp"
+                android:text="@string/vvodslo"
+                android:textAlignment="center"
+                android:textAppearance="@style/vvodsl"
+                android:textColor="@color/white"
+                android:textSize="10pt" />
+
+
+            <EditText
+                android:id="@+id/name_SLOVAR"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/cstedt"
+                android:textAppearance="@style/nazvslovara"
+                android:textColor="@color/white"
+                android:drawableLeft="@drawable/bookmarks1_24"
+                android:paddingLeft="6dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sohr"
+                android:layout_width="300dp"
+                android:layout_height="55dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="200dp"
+                android:height="53sp"
+                android:background="@drawable/sohr"
+                android:fontFamily="@font/ubuntu"
+                android:text="@string/sohr"
+                android:textAppearance="@style/sohr"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/nazad"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/strelka"
+            />
+
+        <TextView
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="35sp"
+            android:textColor="@color/black"
+            android:id="@+id/some_id"
+            android:layout_width="250dp"
+            android:layout_height="46dp"
+            android:gravity="center"
+            android:text="@string/lernwords"
+            android:textAppearance="@style/zagolov"
+            />
+
+
+
+        <RadioGroup
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <RadioButton
+                android:id="@+id/difclt"
+
+                android:layout_width="200dp"
+                android:layout_height="45dp"
+                android:textSize="15pt"
+                android:text="Сложно"
+                android:textAppearance="@style/slognost"
+                android:fontFamily="@font/ubuntu"
+                android:lineHeight="30sp"
+                android:textColor="@color/black" />
+
+            <RadioButton
+
+                android:layout_marginTop="30dp"
+                android:id="@+id/credn"
+                android:layout_width="200dp"
+                android:layout_height="45dp"
+                android:text="Нормально"
+                android:textAppearance="@style/slognost"
+                android:fontFamily="@font/ubuntu"
+                android:lineHeight="30sp"
+                android:textColor="@color/black"
+                />
+
+            <RadioButton
+                android:layout_marginTop="30dp"
+                android:id="@+id/ease"
+                android:layout_width="200dp"
+                android:layout_height="45dp"
+                android:fontFamily="@font/ubuntu"
+                android:lineHeight="30sp"
+                android:text="@string/legko"
+                android:textAppearance="@style/slognost"
+                android:textColor="@color/black"
+                />
+        </RadioGroup>
+        <CheckBox
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/pod"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/ubuntu"
+            android:lineHeight="30sp"
+            android:text="Подсказки"
+            android:textAppearance="@style/slognost"
+            android:textColor="@color/black"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:textColor="@color/white"
+            android:layout_marginTop="120dp"
+            android:layout_gravity="center"
+            android:id="@+id/start2"
+            android:layout_width="275dp"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/nachat"
+            android:text="@string/nachat"
+            android:textAppearance="@style/nachat"
+            android:fontFamily="@font/ubuntu"
+            android:lineHeight="53sp"
+            />
+
+
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

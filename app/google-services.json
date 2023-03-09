@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "536896173652",
+    "firebase_url": "https://pickup-3a012-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "pickup-3a012",
+    "storage_bucket": "pickup-3a012.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536896173652:android:14087645c97b36cb2b9fc1",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536896173652-lv4p973hf85ctc84prr3vt953m4v6jda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnCdbfd7T0mHLFNJm3fjcCGyAyfM7ccoc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536896173652-lv4p973hf85ctc84prr3vt953m4v6jda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

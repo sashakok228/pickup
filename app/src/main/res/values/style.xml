@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="pick_up">
+        <item name="android:textSize"> 50sp </item>
+        <item name="android:textColor"> #FFFFFF </item>
+    </style>
+
+    <style name="learnwords">
+        <item name="android:textSize"> 25sp </item>
+        <item name="android:textColor"> #000000 </item>
+    </style>
+
+    <style name="zagolov">
+        <item name="android:textSize"> 20sp </item>
+        <item name="android:textColor"> #FFFFFF </item>
+    </style>
+
+    <style name="slovarglag">
+        <item name="android:textSize"> 25sp </item>
+        <item name="android:textColor"> #000000 </item>
+    </style>
+
+    <style name="nazad">
+        <item name="android:textSize"> 25sp </item>
+        <item name="android:textColor"> #000000 </item>
+    </style>
+
+    <style name="slovargigr">
+        <item name="android:textSize"> 25sp </item>
+        <item name="android:textColor"> #FFFFFF </item>
+    </style>
+
+    <style name="timer">
+        <item name="android:textSize"> 40sp </item>
+        <item name="android:textColor"> #FFFFFF </item>
+    </style>
+
+    <style name="some_id">
+        <item name="android:textSize"> 25sp </item>
+        <item name="android:textColor"> #FFFFFF </item>
+    </style>
+
+    <style name="podskazka">
+        <item name="android:textSize"> 35sp </item>
+        <item name="android:textColor"> #FFFFFF </item>
+    </style>
+    <style name="perevod">
+        <item name="android:textSize"> 35sp</item>
+        <item name="android:textColor"> #FFFFFF </item>
+    </style>
+
+    <style name="vvodsl">
+        <item name="android:textSize"> 25sp </item>
+        <item name="android:textColor"> #000000 </item>
+    </style>
+
+
+    <style name="sohr">
+        <item name="android:textSize"> 25sp </item>
+        <item name="android:textColor"> #000000 </item>
+    </style>
+
+    <style name="sligr">
+        <item name="android:textSize"> 30sp </item>
+        <item name="android:textColor"> #000000 </item>
+    </style>
+
+    <style name="nachat">
+        <item name="android:textSize"> 25sp </item>
+        <item name="android:textColor"> #000000 </item>
+    </style>
+
+    <style name="slognost">
+        <item name="android:textSize"> 30sp </item>
+        <item name="android:textColor"> #FFFFFF </item>
+    </style>
+
+    <style name="slovar">
+        <item name="android:textSize"> 20sp </item>
+        <item name="android:textColor"> #000000 </item>
+    </style>
+
+    <style name="nazvslovara">
+        <item name="android:textSize"> 20sp </item>
+        <item name="android:textColor"> #000000 </item>
+    </style>
+
+    <style name="dobavit">
+        <item name="android:textSize"> 20sp </item>
+        <item name="android:textColor"> #000000 </item>
+    </style>
+
+    <style name="ydalit">
+        <item name="android:textSize"> 20sp </item>
+        <item name="android:textColor"> #000000 </item>
+    </style>
+
+    <style name="perevodsam">
+        <item name="android:textSize"> 20sp </item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="slvslo">
+        <item name="android:textSize"> 20sp </item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="spisok">
+        <item name="android:textSize"> 20sp </item>
+        <item name="android:textColor"> #000000 </item>
+    </style>
+
+    <style name="save">
+        <item name="android:textSize"> 25sp </item>
+        <item name="android:textColor"> #000000 </item>
+    </style>
+
+    <style name="perevodchik">
+        <item name="android:textSize"> 20sp </item>
+        <item name="android:textColor"> #000000 </item>
+    </style>
+
+    <style name="grust">
+        <item name="android:textSize"> 25sp </item>
+        <item name="android:textColor"> #FFFFFF </item>
+    </style>
+
+    <style name="dobavitslovar">
+        <item name="android:textSize"> 25sp </item>
+        <item name="android:textColor"> #000000 </item>
+    </style>
+
+    <style name="dob">
+        <item name="android:textSize"> 25sp </item>
+        <item name="android:textColor"> #000000 </item>
+    </style>
+
+    <style name="proiti">
+        <item name="android:textSize"> 40sp </item>
+        <item name="android:textColor"> #FFFFFF </item>
+    </style>
+
+</resources>

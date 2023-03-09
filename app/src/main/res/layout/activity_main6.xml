@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity6">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/nazad7"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/strelka"
+        />
+    <TextView
+        android:id="@+id/some_id"
+        android:layout_width="284dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Редактирование"
+        android:textSize="15pt"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal|top"
+        android:fontFamily="@font/ubuntu"
+        android:textStyle="bold"
+
+        />
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="350dp"
+        android:layout_height="450dp"
+
+        android:background="@drawable/bigblok1"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            >
+        <ListView
+
+            android:textAlignment="center"
+            android:id="@+id/LISTVIEW"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:choiceMode="multipleChoice"
+            />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.95"
+            android:orientation="vertical"
+            >
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginTop="10dp"
+                android:textSize="9pt"
+                android:padding="10dp"
+                android:id="@+id/dellt"
+                android:text="Удалить выбранные слова"
+                android:textColor="@color/white"
+                android:textAppearance="@style/nazad"
+                android:background="@drawable/dobavit"
+                android:layout_gravity="center"
+                android:layout_width="300dp"
+                android:layout_height="60dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginTop="5dp"
+        android:id="@+id/dobav"
+        android:text="Добавить слова"
+        android:textColor="@color/white"
+        android:textAppearance="@style/nazad"
+        android:background="@drawable/nazad"
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="50dp"/>
+
+
+</LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
