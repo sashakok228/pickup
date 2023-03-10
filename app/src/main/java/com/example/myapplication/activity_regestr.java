@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -63,52 +65,56 @@ public class activity_regestr extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Заполните поля",Toast.LENGTH_LONG).show();
                 }else {
                     if(pass.equals(pass1)){
-                         String[] nameE = {null};
-                         String[] mailE = {null};
-                         boolean[] prover={true};
-                        boolean[] prover1={true};
-                        int[] kol={0};
-                        int[] kol1={0};
-                        data.addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                for (DataSnapshot da: snapshot.getChildren()){
-                                    kol[0]++;
-                                }
-                            }
+                        if( Patterns.EMAIL_ADDRESS.matcher(mail).matches()){
+                            String[] nameE = {null};
+                            String[] mailE = {null};
+                            boolean[] prover={true};
+                            boolean[] prover1={true};
+                            int[] kol={0};
+                            int[] kol1={0};
 
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError error) {
-
-                            }
-                        });
-                        data.addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                for (DataSnapshot ds : snapshot.getChildren()){
-                                    Users user=ds.getValue(Users.class);
-                                    nameE[0] =user.getName();
-                                    mailE[0] =user.getMail();
-
-                                    if(nameE[0].equals(name)){
-                                        prover[0]=false;
-                                    }
-                                    if(mailE[0].equals(mail)){
-                                        prover1[0]=false;
-                                    }
-                                    kol1[0]++;
-                                    if(kol[0]==kol1[0]){
-                                        prover(prover[0],prover1[0],p2,name,mail,pass);
-                                        break;
+                            data.addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                    for (DataSnapshot da: snapshot.getChildren()){
+                                        kol[0]++;
                                     }
                                 }
-                            }
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError error) {
 
-                            }
-                        });
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
 
+                                }
+                            });
+                            data.addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                    for (DataSnapshot ds : snapshot.getChildren()){
+                                        Users user=ds.getValue(Users.class);
+                                        nameE[0] =user.getName();
+                                        mailE[0] =user.getMail();
+
+                                        if(nameE[0].equals(name)){
+                                            prover[0]=false;
+                                        }
+                                        if(mailE[0].equals(mail)){
+                                            prover1[0]=false;
+                                        }
+                                        kol1[0]++;
+                                        if(kol[0]==kol1[0]){
+                                            prover(prover[0],prover1[0],p2,name,mail,pass);
+                                            break;
+                                        }
+                                    }
+                                }
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+
+                                }
+                            });
+                        }else{
+                            Toast.makeText(getApplicationContext(), "Такой email невозможен", Toast.LENGTH_SHORT).show();
+                        }
                     }else {
                         Toast.makeText(getApplicationContext(),"Пароли не одинаковые",Toast.LENGTH_LONG).show();
                     }
