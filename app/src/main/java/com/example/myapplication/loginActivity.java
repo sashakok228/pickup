@@ -38,7 +38,7 @@ public class loginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Boolean tr=true;
+        pr=true;
         mail1=findViewById(R.id.mail222);
         pass1=findViewById(R.id.pass222);
         btn_reg=findViewById(R.id.auth);
@@ -46,7 +46,6 @@ public class loginActivity extends AppCompatActivity {
         DBHelper sqlHelper1 = new DBHelper(getApplicationContext());
         db1 = sqlHelper1.getWritableDatabase();
         SQLiteDatabase db = sqlHelper1.getReadableDatabase();
-        dan=findViewById(R.id.dang);
         user=getSharedPreferences("user",MODE_PRIVATE);
         data= FirebaseDatabase.getInstance().getReference("users");
         data1= FirebaseDatabase.getInstance().getReference("users");
@@ -55,62 +54,39 @@ public class loginActivity extends AppCompatActivity {
         btn_reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                pr=true;
                 String mail=mail1.getText().toString();
                 String pass=pass1.getText().toString();
-                data.addListenerForSingleValueEvent(new ValueEventListener() {
+                data1.orderByChild("mail").equalTo(mail).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        kol++;
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
-                data1.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        for (DataSnapshot ds : snapshot.getChildren()){
-                            Users users=ds.getValue(Users.class);
-                            String mailE=users.getMail();
-                            String passE=users.getPass();
-                            kol1++;
-                            if(mail1.getText().toString().isEmpty() || pass1.getText().toString().isEmpty()){
-                                    Toast.makeText(getApplicationContext(),"Поля не заполнены", Toast.LENGTH_LONG).show();
+                        for (DataSnapshot us : snapshot.getChildren()){
+                            Users users = us.getValue(Users.class);
+                            if(pass.equals(users.getPass())){
+                                Intent i1 = new Intent(getApplicationContext(),MainActivity.class);
+                                String name=users.getName();
+                                String id=users.getid();
+                                String mail=users.getMail();
+                                String pass=users.getPass();
+                                SharedPreferences.Editor edituser=user.edit();
+                                edituser.putString("id",id);
+                                edituser.putString("name",name);
+                                edituser.putString("mail",mail);
+                                edituser.putString("pass",pass);
+                                edituser.apply();
+                                startActivity(i1);
+                                finish();
                             }else {
-                                if(mailE.equals(mail) && passE.equals(pass)){
-                                    Intent i1 = new Intent(getApplicationContext(),MainActivity.class);
-                                    String name=users.getName();
-                                    String id=users.getid();
-                                    String mail=users.getMail();
-                                    String pass=users.getPass();
-                                    SharedPreferences.Editor edituser=user.edit();
-                                    edituser.putString("id",id);
-                                    edituser.putString("name",name);
-                                    edituser.putString("mail",mail);
-                                    edituser.putString("pass",pass);
-                                    edituser.apply();
-                                    startActivity(i1);
+                                Toast.makeText(loginActivity.this, "Не правильный пароль", Toast.LENGTH_SHORT).show();
 
-                                    finish();
-                                    pr=false;
-                                    break;
-                                }else {
-                                    if(pr==true && kol==kol1){
-                                        dan.setVisibility(View.VISIBLE);
-                                    }
-                                }
                             }
                         }
-                        }
+                    }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-
                     }
                 });
+
             }
         });
         btn_nazad.setOnClickListener(new View.OnClickListener() {
@@ -121,6 +97,7 @@ public class loginActivity extends AppCompatActivity {
                 finish();
             }
         });
+
         
     }
     void zap(String idF){
@@ -157,4 +134,5 @@ public class loginActivity extends AppCompatActivity {
             }
         }
     }
+
 }

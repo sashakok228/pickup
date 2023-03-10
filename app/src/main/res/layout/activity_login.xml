@@ -9,73 +9,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <TextView
-        android:textSize="25pt"
-        android:textColor="@color/white"
-        android:layout_marginTop="21dp"
-        android:layout_gravity="center"
-        android:id="@+id/pick_up"
-        android:layout_width="250dp"
-        android:layout_height="67dp"
-        android:fontFamily="@font/ubuntu"
-        android:gravity="center_horizontal|top"
-        android:lineHeight="57sp"
-        android:text="@string/pick_up"
-        />
-    <TextView
-        android:textSize="15pt"
-        android:textColor="@color/white"
-        android:layout_marginTop="21dp"
-        android:layout_gravity="center"
-        android:layout_width="250dp"
-        android:layout_height="67dp"
-        android:fontFamily="@font/ubuntu"
-        android:gravity="center_horizontal|top"
-        android:lineHeight="57sp"
-        android:text="Авторизация"
-        />
 
-    <LinearLayout
-        android:layout_width="350dp"
-        android:layout_height="450dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/bigblok"
-        android:orientation="vertical">
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/left"
+        android:id="@+id/nazad2343"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/auth" />
 
-        <EditText
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="100dp"
+        app:startIconDrawable="@drawable/message"
+        >
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/mail222"
-            android:layout_width="200dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="100dp"
-            android:hint="mail"
-            android:textAlignment="center"
-            android:textColor="@color/white" />
-
-        <EditText
-            android:id="@+id/pass222"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:hint="pass"
-            android:inputType="textPassword"
-            android:textAlignment="center"
-            android:textColor="@color/white" />
-        <TextView
-            android:id="@+id/dang"
-            android:text="Не верно ввидён логин, либо пароль"
-            android:visibility="gone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:textAlignment="center"
-            android:textAppearance="@style/dobavit"
-            android:fontFamily="@font/ubuntu"
-            android:textColor="@color/white"
+            android:hint="Email"
             />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="30dp"
+        app:startIconDrawable="@drawable/lock"
+        app:endIconMode="password_toggle"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pass222"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Пароль"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/auth"
@@ -89,21 +73,7 @@
             android:text="Войти"
             android:textAppearance="@style/perevodsam"
             android:textColor="@color/white" />
-    </LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:textAppearance="@style/dobavit"
-        android:fontFamily="@font/ubuntu"
-        android:textColor="@color/white"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
-        android:id="@+id/nazad2343"
-        android:layout_width="300dp"
-        android:layout_height="55dp"
-        android:background="@drawable/nazad"
-        android:text="@string/nazad"
-        android:lineHeight="53sp"
-        />
 
 </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
