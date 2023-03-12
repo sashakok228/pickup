@@ -23,6 +23,8 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+
 public class MainActivity6 extends AppCompatActivity {
     ListView ls;
     String[] deletwords2 = new String[100];
@@ -31,7 +33,7 @@ public class MainActivity6 extends AppCompatActivity {
     String[] idf;
     Button delt;
     SQLiteDatabase db2;
-    ArrayAdapter<String> adapter;
+    WordAdapter adapter;
     DatabaseReference data_word;
     SharedPreferences user;
 
@@ -50,8 +52,7 @@ public class MainActivity6 extends AppCompatActivity {
         db2 = sqlHelper2.getWritableDatabase();
         ls = findViewById(R.id.LISTVIEW);
         delt = findViewById(R.id.dellt);
-        deletwords1 = vivodwords(id);
-        idf = vivodwords22(id);
+        vivodwords(id);
         Button btnna = findViewById(R.id.nazad7);
         Intent in3 = new Intent(this, MainActivity5.class);
         in3.putExtra("id", id1);
@@ -64,33 +65,24 @@ public class MainActivity6 extends AppCompatActivity {
                 finish();
             }
         });
-        ls.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                paren = adapterView;
-            }
-        });
         delt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (paren != null) {
-                    SparseBooleanArray chosen = ((ListView) paren).getCheckedItemPositions();
-                    for (int i = 0; i < chosen.size(); i++) {
-                        if (chosen.valueAt(i)) {
-                            String deletword = deletwords1[chosen.keyAt(i)];
-                            db2.delete(DBHelper.TABLE_SLOVAR1, "word = ?", new String[]{String.valueOf(deletword)});
-                            if (!id4.equals("0")) {
-                                String deletword1 = idf[chosen.keyAt(i)];
-                                data_word.child(deletword1).removeValue();
-                            }
+                String [] idF=adapter.getIdsF();
+                String [] word=adapter.getWords_del();
+                if(!id4.equals("0")){
+                    for (String f : idF){
+                        if(f!=null){
+                            data_word.child(f).removeValue();
                         }
                     }
-                    deletwords1 = vivodwords(id);
-                    idf = vivodwords22(id);
-                    paren = null;
-                } else {
-                    Toast.makeText(getApplicationContext(), "Вы не выбрали слова", Toast.LENGTH_LONG).show();
                 }
+                for (String f : word){
+                    if(f!=null){
+                        db2.delete(DBHelper.TABLE_SLOVAR1,"word= ?",new String[]{String.valueOf(f)});
+                    }
+                }
+                vivodwords(id);
             }
         });
         btnna.setOnClickListener(new View.OnClickListener() {
@@ -103,77 +95,39 @@ public class MainActivity6 extends AppCompatActivity {
         });
     }
 
-    public String[] vivodwords(int id) {
-        String txt = "Слово: ";
-        String txt1 = "Перевод: ";
+    public void vivodwords(int id) {
         int blut = 0;
         int blut1 = 0;
         DBHelper sqlHelper = new DBHelper(this);
         SQLiteDatabase db = sqlHelper.getReadableDatabase();
-        String[] head = {DBHelper.COLUMN_ID_SLOVAR, DBHelper.COLUMN_SLOVO, DBHelper.COLUMN_SLOVO_TRANS};
+        String[] head = {DBHelper.COLUMN_ID_SLOVAR, DBHelper.COLUMN_SLOVO, DBHelper.COLUMN_SLOVO_TRANS,DBHelper.COLUMN_IDF};
         Cursor cr = db.query(DBHelper.TABLE_SLOVAR1, head, null, null, null, null, null);
         int indexNAME = cr.getColumnIndex(DBHelper.COLUMN_SLOVO);
         int indexID = cr.getColumnIndex(DBHelper.COLUMN_ID_SLOVAR);
         int indextran = cr.getColumnIndex(DBHelper.COLUMN_SLOVO_TRANS);
+        int indexIDF = cr.getColumnIndex(DBHelper.COLUMN_IDF);
         while (cr.moveToNext()) {
             int id2 = cr.getInt(indexID);
             if (id == id2) {
                 blut++;
             }
         }
-        String[] slova = new String[blut];
-        String[] slova1 = new String[blut];
+        WordsCut[] cuts = new WordsCut[blut];
         Cursor cr1 = db.query(DBHelper.TABLE_SLOVAR1, head, null, null, null, null, null);
         while (cr1.moveToNext()) {
             int id3 = cr1.getInt(indexID);
             if (id == id3) {
                 String slovo = cr1.getString(indexNAME);
                 String slovo1 = cr1.getString(indextran);
-                String txt3 = txt + slovo + " " + txt1 + slovo1;
-                slova1[blut1] = slovo;
-                slova[blut1] = txt3;
+                String slovoID = cr1.getString(indexIDF);
+                WordsCut cut=new WordsCut(slovo,slovo1,slovoID);
+                cuts[blut1]=cut;
                 blut1++;
             }
 
         }
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, slova) {
-            @Override
-            public View getView(int p, View con, ViewGroup parent) {
-                View view = super.getView(p, con, parent);
-                TextView textView = view.findViewById(android.R.id.text1);
-                textView.setTextColor(Color.WHITE);
-                return view;
-            }
-        };
-        ls.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        adapter= new WordAdapter(getApplicationContext(),cuts);
         ls.setAdapter(adapter);
-        return slova1;
     }
 
-    public String[] vivodwords22(int id) {
-        DBHelper sqlHelper = new DBHelper(this);
-        int blut = 0;
-        int blut1 = 0;
-        SQLiteDatabase db = sqlHelper.getReadableDatabase();
-        String[] head = {DBHelper.COLUMN_ID_SLOVAR, DBHelper.COLUMN_IDF, DBHelper.COLUMN_SLOVO_TRANS};
-        Cursor cr = db.query(DBHelper.TABLE_SLOVAR1, head, null, null, null, null, null);
-        int indexID = cr.getColumnIndex(DBHelper.COLUMN_ID_SLOVAR);
-        while (cr.moveToNext()) {
-            int id2 = cr.getInt(indexID);
-            if (id == id2) {
-                blut++;
-            }
-        }
-        String[] idf = new String[blut];
-        Cursor cr1 = db.query(DBHelper.TABLE_SLOVAR1, head, null, null, null, null, null);
-        int indexIDF = cr1.getColumnIndex(DBHelper.COLUMN_IDF);
-        while (cr1.moveToNext()) {
-            int id3 = cr1.getInt(indexID);
-            if (id == id3) {
-                idf[blut1] = cr1.getString(indexIDF);
-                blut1++;
-            }
-        }
-        return idf;
-    }
 }

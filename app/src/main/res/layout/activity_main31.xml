@@ -19,6 +19,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/left"
+
             />
 
         <TextView
@@ -33,62 +34,47 @@
             android:textStyle="bold"
 
             />
-
-        <LinearLayout
-            android:layout_width="350dp"
-            android:layout_height="450dp"
+        <ImageView
+            android:layout_marginLeft="25dp"
+            android:layout_width="290dp"
+            android:layout_height="20dp"
+            android:background="@drawable/sozdw"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="40dp"
-            android:orientation="vertical"
-            android:background="@drawable/bigblok"
-
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="50dp"
+            app:startIconDrawable="@drawable/book"
+            app:counterEnabled="true"
+            app:counterMaxLength="10"
             >
-
-            <TextView
-                android:id="@+id/nazvslov"
-                android:layout_width="340dp"
-                android:layout_height="30dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:fontFamily="@font/ubuntu"
-                android:lineHeight="29sp"
-                android:text="@string/vvodslo"
-                android:textAlignment="center"
-                android:textAppearance="@style/vvodsl"
-                android:textColor="@color/white"
-                android:textSize="10pt" />
-
-
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/name_SLOVAR"
-                android:layout_width="200dp"
-                android:layout_height="35dp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/cstedt"
-                android:textAppearance="@style/nazvslovara"
-                android:textColor="@color/white"
-                android:drawableLeft="@drawable/bookmarks1_24"
-                android:paddingLeft="6dp"
+                android:maxLength="10"
+                android:hint="Имя словаря"
                 />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/sohr"
                 android:layout_width="300dp"
                 android:layout_height="55dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
                 android:layout_gravity="center"
-                android:layout_marginTop="200dp"
+                android:layout_marginTop="30dp"
                 android:height="53sp"
-                android:background="@drawable/sohr"
+                android:background="@drawable/nazad"
                 android:fontFamily="@font/ubuntu"
-                android:text="@string/sohr"
+                android:text="Создать"
                 android:textAppearance="@style/sohr"
                 android:textColor="@color/white" />
-        </LinearLayout>
+
 
 
 

@@ -32,35 +32,17 @@
         android:textStyle="bold"
 
         />
-    <LinearLayout
-        android:layout_marginTop="20dp"
-        android:layout_width="350dp"
-        android:layout_height="450dp"
 
-        android:background="@drawable/bigblok1"
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.2"
-            >
+
         <ListView
-
             android:textAlignment="center"
             android:id="@+id/LISTVIEW"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="400dp"
             android:choiceMode="multipleChoice"
             />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.95"
-            android:orientation="vertical"
-            >
+
+
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_marginTop="10dp"
                 android:textSize="9pt"
@@ -69,12 +51,10 @@
                 android:text="Удалить выбранные слова"
                 android:textColor="@color/white"
                 android:textAppearance="@style/nazad"
-                android:background="@drawable/dobavit"
+                android:background="@drawable/nazad"
                 android:layout_gravity="center"
                 android:layout_width="300dp"
                 android:layout_height="60dp"/>
-        </LinearLayout>
-    </LinearLayout>
     <androidx.appcompat.widget.AppCompatButton
         android:layout_marginTop="5dp"
         android:id="@+id/dobav"

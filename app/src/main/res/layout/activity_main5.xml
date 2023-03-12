@@ -13,7 +13,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:layout_marginTop="30dp"
         android:layout_marginLeft="15dp"
-        android:id="@+id/nazad7"
+        android:id="@+id/nazad72424"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/left"
@@ -32,139 +32,130 @@
         android:textStyle="bold"
 
         />
-    
-    <LinearLayout
-        android:layout_marginTop="35dp"
-        android:orientation="vertical"
-        android:id="@+id/bigbl"
-        android:layout_width="330dp"
-        android:layout_height="450dp"
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:text="Редактируйте свой словарь здесь"
+        android:textSize="8pt"
+        android:textColor="@color/ko"
+        android:gravity=""
+        android:fontFamily="@font/ubuntu"
+        android:textStyle="bold"
+
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@drawable/bigblok"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="30dp"
+        app:startIconDrawable="@drawable/book"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
         >
-        <LinearLayout
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_SLOVAR"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:maxLength="10"
+            android:hint="Имя словаря"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="10dp"
-            android:layout_weight="0.5">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:layout_gravity="center"
-                android:lineHeight="23sp"
-                android:fontFamily="@font/ubuntu"
-                android:id="@+id/nameslovar12"
-                android:text="Словарь:"
-                android:textSize="10pt"
-                />
-            <EditText
-                android:textColor="@color/white"
-                android:layout_marginTop="1dp"
-                android:id="@+id/name_slovo"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:fontFamily="@font/ubuntu"
-                android:lineHeight="23sp"
-                android:hint="Имя словаря"
-                android:textAppearance="@style/slovar"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-
-            android:layout_weight="0.5"
-            >
-<EditText
-    android:textColor="@color/white"
-    android:layout_marginTop="20dp"
-    android:textAlignment="center"
-    android:id="@+id/wordADD"
-    android:hint="Слова для добавление"
-    android:layout_width="250dp"
-    android:textAppearance="@style/nazvslovara"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-
-    />
-
-        </LinearLayout>
-        <LinearLayout
+    android:layout_height="80dp"
+    >
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-            android:orientation="vertical"
-         android:layout_weight="0.5">
-            <androidx.appcompat.widget.AppCompatButton
-                android:textColor="@color/white"
-                android:id="@+id/btnADDword"
-                android:layout_width="140dp"
-                android:layout_height="41dp"
-                android:background="@drawable/dobavit"
-                android:text="@string/dobavit"
-                android:textAppearance="@style/dobavit"
-                android:fontFamily="@font/ubuntu"
-                android:lineHeight="23sp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                 />
-            <androidx.appcompat.widget.AppCompatButton
-                android:padding="10dp"
-                android:textColor="@color/white"
-                android:id="@+id/btndell"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/dobavit"
-                android:text="Удалить слова"
-                android:textAppearance="@style/dobavit"
-                android:fontFamily="@font/ubuntu"
-                android:lineHeight="23sp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                />
-        </LinearLayout>
-        <LinearLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:orientation="horizontal"
+        android:layout_weight="0.98"
+        ></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.33"
+        android:orientation="vertical"
+        >
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:startIconDrawable="@drawable/word"
             >
-
-            <EditText
-                android:textColor="@color/white"
-
-                android:textAlignment="center"
-                android:hint="Перевод слово"
-                android:id="@+id/perevod"
-                android:layout_width="wrap_content"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/wordADD"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
-                android:visibility="gone" />
-            <androidx.appcompat.widget.AppCompatButton
-                android:textColor="@color/white"
-                android:layout_marginRight="10dp"
-                android:id="@+id/trans"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:text="@string/perevodsam"
-                android:textAppearance="@style/perevodsam"
-                android:fontFamily="@font/ubuntu"
-                android:lineHeight="23sp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/perevodsam"
-                 />
-        </LinearLayout>
-
-
+                android:hint="Слово для добавление"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.98"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:id="@+id/btnADDword"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:textSize="9pt"
+            android:textAppearance="@style/save"
+            android:fontFamily="@font/ubuntu"
+            android:lineHeight="53sp"
+            android:textColor="@color/white"
+            android:background="@drawable/dobavword"
+            />
+    </LinearLayout>
+</LinearLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/visb"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:startIconDrawable="@drawable/wordt"
+        android:visibility="gone"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/perevod"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Перевод слово"
+            android:visibility="gone "
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:id="@+id/trans"
+        android:layout_width="220dp"
+        android:layout_height="55dp"
+        android:textSize="9pt"
+        android:text="Ввести свой перевод"
+        android:textAppearance="@style/save"
+        android:fontFamily="@font/ubuntu"
+        android:lineHeight="53sp"
+        android:textColor="@color/white"
+        android:background="@drawable/save"
+        />
+
+
     <androidx.appcompat.widget.AppCompatButton
         android:layout_marginTop="15dp"
         android:layout_gravity="center"

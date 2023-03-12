@@ -42,13 +42,13 @@ public class MainActivity5 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main5);
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button nz = findViewById(R.id.nazad7);
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button btndell = findViewById(R.id.btndell);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button nz = findViewById(R.id.nazad72424);
         Intent arg=getIntent();
         String id1 = arg.getStringExtra("id");
         int id = Integer.parseInt(id1);
         String name4=arg.getStringExtra("name");
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) EditText txtname=findViewById(R.id.name_slovo);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) EditText txtname=findViewById(R.id.name_SLOVAR);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) View visibl=findViewById(R.id.visb);
         txtname.setText(name4);
         DBHelper sqlHelper = new DBHelper(this);
         SQLiteDatabase db = sqlHelper.getWritableDatabase();
@@ -70,7 +70,6 @@ public class MainActivity5 extends AppCompatActivity {
             }
         }
         Intent i=new Intent(this,MainActivity32.class);
-        EditText name223=findViewById(R.id.name_slovo);
         Intent del=new Intent(getApplicationContext(),MainActivity6.class);
         del.putExtra("id",id1);
         del.putExtra("name",name4);
@@ -78,27 +77,20 @@ public class MainActivity5 extends AppCompatActivity {
         data_word= FirebaseDatabase.getInstance().getReference("words");
         user=getSharedPreferences("user",MODE_PRIVATE);
         String id4=user.getString("id","0");
-        btndell.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(del);
-                finish();
-            }
-        });
         String finalIdfSLOV = idfSLOV;
         nz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String nameSLOV=name223.getText().toString();
+                String nameSLOV=txtname.getText().toString();
                 if(nameSLOV!=null) {
                     ContentValues val = new ContentValues();
                     val.put(DBHelper.COLUMN_NAME, nameSLOV);
                     if(!id4.equals("0")){
                         Dictionaries dr=new Dictionaries(finalIdfSLOV,id4,nameSLOV);
                         data_ds.child(finalIdfSLOV).setValue(dr);
-                        val.put(DBHelper.COLUMN_NAME, nameSLOV);
                         db1.update(DBHelper.TABLE_SLOVAR, val, "id= ?", new String[]{String.valueOf(id)});
-
+                    }else {
+                        db1.update(DBHelper.TABLE_SLOVAR, val, "id= ?", new String[]{String.valueOf(id)});
                     }
                     startActivity(i);
                     finish();
@@ -119,11 +111,13 @@ public class MainActivity5 extends AppCompatActivity {
                     perevod2[0] = false;
                     perevod3[0] = false;
                     perevod.setVisibility(View.VISIBLE);
+                    visibl.setVisibility(View.VISIBLE);
                     btntrans.setText("Использовать переводчик");
                 }else {
                     perevod2[0] = true;
                     perevod3[0] = true;
                     perevod.setVisibility(View.GONE);
+                    visibl.setVisibility(View.GONE);
                     btntrans.setText("Ввести самому перевод слово");
                 }
             }
