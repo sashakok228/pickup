@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -15,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -49,29 +51,76 @@ public class MainActivity2 extends AppCompatActivity {
         String[] s={""};
         s[0]=arg.getStringExtra("name");
         final int[] dif = {0};
-        RadioButton r1=findViewById(R.id.ease);
-        RadioButton r2=findViewById(R.id.credn);
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) RadioButton r3=findViewById(R.id.difclt);
-        r1.setOnClickListener(new View.OnClickListener() {
+        TextView e1=findViewById(R.id.ea1);
+        TextView e2=findViewById(R.id.ea2);
+        TextView sr1=findViewById(R.id.sr1);
+        TextView sr2=findViewById(R.id.sr2);
+        TextView t1=findViewById(R.id.t1);
+        TextView t2=findViewById(R.id.t2);
+        TextView p1=findViewById(R.id.p1);
+        TextView p2=findViewById(R.id.p2);
+        LinearLayout eas=findViewById(R.id.easy);
+        LinearLayout srd=findViewById(R.id.sredn);
+        LinearLayout d=findViewById(R.id.difcl);
+        LinearLayout prac=findViewById(R.id.practic);
+        eas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dif[0]=1;
+                e1.setVisibility(View.GONE);
+                e2.setVisibility(View.VISIBLE);
+                sr1.setVisibility(View.VISIBLE);
+                sr2.setVisibility(View.GONE);
+                t1.setVisibility(View.VISIBLE);
+                t2.setVisibility(View.GONE);
+                p1.setVisibility(View.VISIBLE);
+                p2.setVisibility(View.GONE);
             }
         });
-        r2.setOnClickListener(new View.OnClickListener() {
+        srd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dif[0]=2;
+                e1.setVisibility(View.VISIBLE);
+                e2.setVisibility(View.GONE);
+                sr1.setVisibility(View.GONE);
+                sr2.setVisibility(View.VISIBLE);
+                t1.setVisibility(View.VISIBLE);
+                t2.setVisibility(View.GONE);
+                p1.setVisibility(View.VISIBLE);
+                p2.setVisibility(View.GONE);
             }
         });
-        r3.setOnClickListener(new View.OnClickListener() {
+        d.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dif[0]=3;
+                e1.setVisibility(View.VISIBLE);
+                e2.setVisibility(View.GONE);
+                sr1.setVisibility(View.VISIBLE);
+                sr2.setVisibility(View.GONE);
+                t1.setVisibility(View.GONE);
+                t2.setVisibility(View.VISIBLE);
+                p1.setVisibility(View.VISIBLE);
+                p2.setVisibility(View.GONE);
+            }
+        });
+        prac.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dif[0]=4;
+                e1.setVisibility(View.VISIBLE);
+                e2.setVisibility(View.GONE);
+                sr1.setVisibility(View.VISIBLE);
+                sr2.setVisibility(View.GONE);
+                t1.setVisibility(View.VISIBLE);
+                t2.setVisibility(View.GONE);
+                p1.setVisibility(View.GONE);
+                p2.setVisibility(View.VISIBLE);
             }
         });
         final Boolean[] pods = {false};
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) CheckBox pod=findViewById(R.id.pod);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) SwitchCompat pod=findViewById(R.id.pod);
         pod.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {

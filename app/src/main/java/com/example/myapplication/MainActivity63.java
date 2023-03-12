@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity63 extends AppCompatActivity {
+    CountDownTimer time22;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,11 @@ public class MainActivity63 extends AppCompatActivity {
              txtGL.setText(word_gs);
              ProgressBar ber=findViewById(R.id.progressBar3);
              TextView timer=findViewById(R.id.timer3);
+            if(dif==4){
+                ber.setVisibility(View.GONE);
+                timer.setText("Режим практики");
+
+            }
             Button r1=findViewById(R.id.b1);
             Button r2=findViewById(R.id.b2);
             Button r3=findViewById(R.id.b3);
@@ -74,7 +80,7 @@ public class MainActivity63 extends AppCompatActivity {
             String [] sps4={"","test","record","common","gold","possible","plane","under","dry","ran","game",};
             int y=0;
             int ran= (int) ((Math.random()*3)+1);
-            if(dif==1) {
+            if(dif==1 || dif==4) {
                 if (ran == 1) {
                     ran = (int) ((Math.random() * 9) + 1);
                     if (sps1[ran].equals(word_g)) {
@@ -292,58 +298,62 @@ public class MainActivity63 extends AppCompatActivity {
                 }
             }
             int finalY1 = y;
-            CountDownTimer time22=new CountDownTimer(finalTime,1000){
+            if(dif!=4) {
+                time22 = new CountDownTimer(finalTime, 1000) {
 
-                @Override
-                public void onTick(long l) {
-                    timer.setText(""+l/1000);
-                    ber.setProgress((int) (l/1000));
-                    if(pod==true & l/1000==((finalTime/1000) /2)){
-                        int ranf=0;
-                        if(dif==1){
-                            ranf= (int) ((Math.random()*3)+1);
-                            while (ranf==finalY1){
-                                ranf= (int) ((Math.random()*3)+1);
+                    @Override
+                    public void onTick(long l) {
+                        timer.setText("" + l / 1000);
+                        ber.setProgress((int) (l / 1000));
+                        if (pod == true & l / 1000 == ((finalTime / 1000) / 2)) {
+                            int ranf = 0;
+                            if (dif == 1) {
+                                ranf = (int) ((Math.random() * 3) + 1);
+                                while (ranf == finalY1) {
+                                    ranf = (int) ((Math.random() * 3) + 1);
+                                }
+                            } else if (dif == 2) {
+                                ranf = (int) ((Math.random() * 4) + 1);
+                                while (ranf == finalY1) {
+                                    ranf = (int) ((Math.random() * 4) + 1);
+                                }
+                            } else if (dif == 3) {
+                                ranf = (int) ((Math.random() * 5) + 1);
+                                while (ranf == finalY1) {
+                                    ranf = (int) ((Math.random() * 5) + 1);
+                                }
                             }
-                        }else if(dif==2){
-                            ranf= (int) ((Math.random()*4)+1);
-                            while (ranf==finalY1){
-                                ranf= (int) ((Math.random()*4)+1);
-                            }
-                        }else if(dif==3){
-                            ranf= (int) ((Math.random()*5)+1);
-                            while (ranf==finalY1){
-                                ranf= (int) ((Math.random()*5)+1);
+                            if (ranf == 1) {
+                                r1.setVisibility(View.GONE);
+                            } else if (ranf == 2) {
+                                r2.setVisibility(View.GONE);
+                            } else if (ranf == 3) {
+                                r3.setVisibility(View.GONE);
+                            } else if (ranf == 4) {
+                                r4.setVisibility(View.GONE);
+                            } else if (ranf == 5) {
+                                r3.setVisibility(View.GONE);
                             }
                         }
-                    if(ranf==1){
-                        r1.setVisibility(View.GONE);
-                    }else if(ranf==2){
-                        r2.setVisibility(View.GONE);
-                    }else if(ranf==3){
-                        r3.setVisibility(View.GONE);
-                    }else if(ranf==4){
-                        r4.setVisibility(View.GONE);
-                    }else if(ranf==5){
-                        r3.setVisibility(View.GONE);
                     }
-                    }
-                }
 
-                @Override
-                public void onFinish() {
-                    ot[kol[0]-1]="Не ответил";
-                    kol[0]--;
-                    perexod(dif,nameSLOVAR, pod, words, transl, kol[0], kol1, ball[0],vop,ot,otprav);
-                }
-            }.start();
+                    @Override
+                    public void onFinish() {
+                        kol[0]--;
+                        ot[kol[0]] = "Не ответил";
+                        perexod(dif, nameSLOVAR, pod, words, transl, kol[0], kol1, ball[0], vop, ot, otprav);
+                    }
+                }.start();
+            }
             Button stop=findViewById(R.id.stop);
             stop.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent i =new Intent(getApplicationContext(),MainActivity3.class);
                     startActivity(i);
-                    time22.cancel();
+                    if(dif!=4){
+                        time22.cancel();
+                    }
                     finish();
                 }
             });
@@ -355,11 +365,15 @@ public class MainActivity63 extends AppCompatActivity {
                          if(word_g.equals(text)){
                             ball[0]++;
                              kol[0]--;
-                             time22.cancel();
+                             if(dif!=4){
+                                 time22.cancel();
+                             }
                              perexod(dif,nameSLOVAR, pod, words, transl, kol[0], kol1, ball[0],vop,ot,otprav);
                         }else {
                              kol[0]--;
-                             time22.cancel();
+                             if(dif!=4){
+                                 time22.cancel();
+                             }
                              perexod(dif,nameSLOVAR, pod, words, transl, kol[0], kol1, ball[0],vop,ot,otprav);
                          }
 
@@ -373,7 +387,9 @@ public class MainActivity63 extends AppCompatActivity {
                          if(word_g.equals(text)){
                             ball[0]++;
                              kol[0]--;
-                             time22.cancel();
+                             if(dif!=4){
+                                 time22.cancel();
+                             }
                              perexod(dif,nameSLOVAR, pod, words, transl, kol[0], kol1, ball[0],vop,ot,otprav);
                         }else {
                              kol[0]--;
@@ -390,7 +406,9 @@ public class MainActivity63 extends AppCompatActivity {
                          if(word_g.equals(text)){
                             ball[0]++;
                              kol[0]--;
-                             time22.cancel();
+                             if(dif!=4){
+                                 time22.cancel();
+                             }
                              perexod(dif,nameSLOVAR, pod, words, transl, kol[0], kol1, ball[0],vop,ot,otprav);
                         }else {
                              kol[0]--;
@@ -407,11 +425,15 @@ public class MainActivity63 extends AppCompatActivity {
                          if(word_g.equals(text)){
                             ball[0]++;
                              kol[0]--;
-                             time22.cancel();
+                             if(dif!=4){
+                                 time22.cancel();
+                             }
                              perexod(dif,nameSLOVAR, pod, words, transl, kol[0], kol1, ball[0],vop,ot,otprav);
                         }else {
                              kol[0]--;
-                             time22.cancel();
+                             if(dif!=4){
+                                 time22.cancel();
+                             }
                              perexod(dif,nameSLOVAR, pod, words, transl, kol[0], kol1, ball[0],vop,ot,otprav);
                          }
                }
@@ -424,11 +446,15 @@ public class MainActivity63 extends AppCompatActivity {
                          if(word_g.equals(text)){
                             ball[0]++;
                              kol[0]--;
-                             time22.cancel();
+                             if(dif!=4){
+                                 time22.cancel();
+                             }
                              perexod(dif,nameSLOVAR, pod, words, transl, kol[0], kol1, ball[0],vop,ot,otprav);
                         }else {
                              kol[0]--;
-                             time22.cancel();
+                             if(dif!=4){
+                                 time22.cancel();
+                             }
                              perexod(dif,nameSLOVAR, pod, words, transl, kol[0], kol1, ball[0],vop,ot,otprav);
                          }
                }

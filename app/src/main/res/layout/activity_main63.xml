@@ -13,11 +13,11 @@
         <TextView
             android:id="@+id/NAMESLOVAR"
             android:layout_marginTop="35dp"
-            android:layout_marginLeft="20dp"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:fontFamily="@font/ubuntu"
             android:gravity="top"
+
             android:lineHeight="29sp"
             android:textColor="@color/black"
             android:layout_gravity="center"
@@ -28,20 +28,24 @@
             android:id="@+id/timer3"
             android:layout_marginTop="60dp"
             android:layout_gravity="center"
-            android:layout_width="61dp"
+            android:layout_width="wrap_content"
             android:layout_height="49dp"
             android:lineHeight="48sp"
             android:textAppearance="@style/timer"
             android:textColor="@color/black"
 
             />
-        <ProgressBar
-            android:id="@+id/progressBar3"
-            style="?android:attr/progressBarStyleHorizontal"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="60dp"
-            />
+            android:layout_height="130dp">
+            <ProgressBar
+                android:id="@+id/progressBar3"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="60dp"
+                />
+        </LinearLayout>
         <TextView
             android:textColor="@color/black"
             android:id="@+id/txy223"

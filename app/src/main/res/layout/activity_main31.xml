@@ -18,7 +18,7 @@
             android:id="@+id/nazad"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@drawable/strelka"
+            android:background="@drawable/left"
             />
 
         <TextView

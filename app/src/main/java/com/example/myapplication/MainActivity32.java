@@ -28,7 +28,7 @@ public class MainActivity32 extends AppCompatActivity {
             }
         });
         Intent t1 = new Intent(getApplicationContext(), MainActivity31.class);
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) LinearLayout dobvslov = findViewById(R.id.dobaslov);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button dobvslov = findViewById(R.id.dobaslov);
         dobvslov.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

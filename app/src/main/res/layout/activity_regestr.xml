@@ -46,6 +46,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/name2"
                 android:layout_width="300dp"
+                android:maxLength="20"
                 android:layout_height="wrap_content"
                 android:hint="Имя аккаунта"
                 />

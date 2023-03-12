@@ -33,6 +33,7 @@
         android:gravity="top"
         android:lineHeight="29sp"
         android:textAppearance="@style/slovargigr"
+        android:textColor="@color/black"
          />
        <LinearLayout
            android:layout_marginTop="20dp"

@@ -12,9 +12,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity61 extends AppCompatActivity {
-
+    CountDownTimer time22;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +49,10 @@ public class MainActivity61 extends AppCompatActivity {
             ProgressBar ber = findViewById(R.id.progressBar);
             TextView timer = findViewById(R.id.timer);
             int time = 60000;
+            if(dif==4){
+                ber.setVisibility(View.GONE);
+                timer.setText("Режим практики");
+            }
             if (dif == 1) {
                 time = 40000;
                 ber.setMax(40);
@@ -67,31 +72,35 @@ public class MainActivity61 extends AppCompatActivity {
             TextView podskas = findViewById(R.id.podskaska);
             int finalTime = time;
             String finalPodskask = podskask;
-            CountDownTimer time22 = new CountDownTimer(finalTime, 1000) {
+            if(dif!=4) {
+                time22 = new CountDownTimer(finalTime, 1000) {
 
-                @Override
-                public void onTick(long l) {
-                    timer.setText("" + l / 1000);
-                    ber.setProgress((int) (l / 1000));
-                    if (pod == true & l / 1000 == ((finalTime / 1000) / 2)) {
-                        podskas.setText("Половина слова: " + finalPodskask);
+                    @Override
+                    public void onTick(long l) {
+                        timer.setText("" + l / 1000);
+                        ber.setProgress((int) (l / 1000));
+                        if (pod == true & l / 1000 == ((finalTime / 1000) / 2)) {
+                            podskas.setText("Половина слова: " + finalPodskask);
+                        }
                     }
-                }
 
-                @Override
-                public void onFinish() {
-                    kol[0]--;
-                    ot[kol[0]-1]="Не ответил";
-                    perexod(dif,nameSLOVAR, pod, words, transl, kol[0], kol1, ball[0],vop,ot,otprav);
-                }
-            }.start();
+                    @Override
+                    public void onFinish() {
+                        kol[0]--;
+                        ot[kol[0]] = "Не ответил";
+                        perexod(dif, nameSLOVAR, pod, words, transl, kol[0], kol1, ball[0], vop, ot, otprav);
+                    }
+                }.start();
+            }
             Button stop=findViewById(R.id.stop);
             stop.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent i =new Intent(getApplicationContext(),MainActivity3.class);
                     startActivity(i);
-                    time22.cancel();
+                    if(dif!=4){
+                        time22.cancel();
+                    }
                     finish();
                 }
             });
@@ -107,11 +116,15 @@ public class MainActivity61 extends AppCompatActivity {
                     if (word_gs.equals(text)) {
                         ball[0]++;
                         kol[0]--;
-                        time22.cancel();
+                        if(dif!=4){
+                            time22.cancel();
+                        }
                         perexod(dif,nameSLOVAR,pod,words,transl,kol[0],kol1,ball[0],vop,ot,otprav);
                     }else {
                         kol[0]--;
-                        time22.cancel();
+                        if(dif!=4){
+                            time22.cancel();
+                        }
                         perexod(dif,nameSLOVAR,pod,words,transl,kol[0],kol1,ball[0],vop,ot,otprav);
                     }
                 }

@@ -14,9 +14,9 @@
         <TextView
             android:id="@+id/NAMESLOVAR"
             android:layout_marginTop="70dp"
-            android:layout_marginLeft="20dp"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
+            android:textColor="@color/black"
             android:fontFamily="@font/ubuntu"
             android:layout_gravity="center"
             android:lineHeight="29sp"
@@ -27,18 +27,22 @@
             android:id="@+id/timer2"
             android:layout_marginTop="30dp"
             android:layout_gravity="center"
-            android:layout_width="61dp"
+            android:layout_width="wrap_content"
             android:layout_height="49dp"
             android:lineHeight="48sp"
             android:textAppearance="@style/timer"
             />
-        <ProgressBar
-            android:id="@+id/progressBar1"
-            style="?android:attr/progressBarStyleHorizontal"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="60dp"
-            />
+            android:layout_height="130dp">
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="60dp"
+                />
+        </LinearLayout>
         <TextView
             android:textColor="@color/black"
             android:id="@+id/txy223"
@@ -88,7 +92,7 @@
             <EditText
                 android:textAppearance="@style/some_id"
                 android:fontFamily="@font/ubuntu"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textAlignment="center"
                 android:id="@+id/edtGL2"
                 android:layout_marginLeft="30dp"

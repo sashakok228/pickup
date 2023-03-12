@@ -23,7 +23,7 @@
                 android:id="@+id/nazad243"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:background="@drawable/strelka"
+                android:background="@drawable/left"
                 />
             <TextView
                 android:layout_width="169dp"
