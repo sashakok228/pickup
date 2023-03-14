@@ -9,7 +9,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="0.41"
+    >
     <androidx.appcompat.widget.AppCompatButton
         android:layout_marginTop="30dp"
         android:layout_marginLeft="15dp"
@@ -24,7 +29,7 @@
         android:layout_height="40dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
-        android:text="Редактирование"
+        android:text="Список слов"
         android:textSize="15pt"
         android:textColor="@color/black"
         android:gravity="center_horizontal|top"
@@ -32,17 +37,25 @@
         android:textStyle="bold"
 
         />
-
-
+</LinearLayout>
+<LinearLayout
+    android:layout_weight="0.24"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
         <ListView
             android:textAlignment="center"
             android:id="@+id/LISTVIEW"
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:choiceMode="multipleChoice"
             />
-
-
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="0.41"
+    android:orientation="vertical"
+    >
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_marginTop="10dp"
                 android:textSize="9pt"
@@ -65,7 +78,7 @@
         android:layout_gravity="center"
         android:layout_width="300dp"
         android:layout_height="50dp"/>
-
+</LinearLayout>
 
 </LinearLayout>
 

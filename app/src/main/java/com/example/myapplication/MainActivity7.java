@@ -14,8 +14,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity7 extends AppCompatActivity {
-    ArrayAdapter<String> adapter;
+    WordAdapterOtvet adapter;
     ListView ls;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,28 +34,16 @@ public class MainActivity7 extends AppCompatActivity {
        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView txt=findViewById(R.id.textfin);
      @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button btn=findViewById(R.id.nazad3);
        txt.setText("Ваш результат:\n"+bal+"/"+kol);
-       int l=1;
-       int l1=0;
+        int l=1;
        int l2=0;
-       String ot1=" ваш ответ: ";
-       String vp1=" Слово: ";
-       String otprav1=" правильный ответ: ";
-       String [] slov=new String[vp.length];
+       WordsCutOtvet [] slov=new WordsCutOtvet[vp.length];
         while (l2!=kol){
-                slov[l1]=l+")"+vp1+vp[kol-1]+ot1+ot[kol-1]+otprav1+otprav[kol-1];
-               kol--;
-                 l++;
-                 l1++;
+            WordsCutOtvet ot2 =new WordsCutOtvet(String.valueOf(l),vp[kol-1],ot[kol-1],otprav[kol-1]);
+            slov[kol-1]=ot2;
+            l++;
+            kol--;
             }
-        adapter=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,slov){
-            @Override
-            public View getView(int p, View con, ViewGroup parent) {
-                View view = super.getView(p, con, parent);
-                TextView textView = (TextView) view.findViewById(android.R.id.text1);
-                textView.setTextColor(Color.WHITE);
-                return view;
-            }
-        };
+        adapter=new WordAdapterOtvet(getApplicationContext(),slov);
         ls=findViewById(R.id.LISTVIEW22);
         ls.setAdapter(adapter);
         btn.setOnClickListener(new View.OnClickListener() {

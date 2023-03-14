@@ -55,7 +55,17 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-
+            <TextView
+                android:layout_marginTop="30dp"
+                android:id="@+id/grust1"
+                android:textColor="@color/black"
+                android:layout_width="360dp"
+                android:layout_height="75dp"
+                android:text="@string/grust"
+                android:textAppearance="@style/grust"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                />
 
 
 

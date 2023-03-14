@@ -54,6 +54,19 @@
             android:lineHeight="53sp"
             android:background="@drawable/some_id1" />
         <androidx.appcompat.widget.AppCompatButton
+            android:visibility="gone"
+            android:textAppearance="@style/dobavit"
+            android:fontFamily="@font/ubuntu"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/dobav"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:text="Доб"
+            android:lineHeight="53sp"
+            android:background="@drawable/some_id1" />
+        <androidx.appcompat.widget.AppCompatButton
             android:textAppearance="@style/dobavit"
             android:fontFamily="@font/ubuntu"
             android:textColor="@color/white"

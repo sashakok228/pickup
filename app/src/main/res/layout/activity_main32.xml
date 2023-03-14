@@ -744,8 +744,14 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
+            android:text="Добавить"
+            android:textAppearance="@style/dobavit"
+            android:textSize="25sp"
+            android:fontFamily="@font/ubuntu"
+            android:textStyle="bold"
+            android:textColor="@color/white"
             android:layout_marginTop="20dp"
-            android:layout_gravity="center"
+            android:layout_gravity="center|top"
             android:id="@+id/dobaslov"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

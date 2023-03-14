@@ -18,8 +18,10 @@
             android:orientation="horizontal"
             >
             <TextView
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
                 android:textSize="10pt"
-                android:textColor="@color/black"
+                android:textColor="@color/ko"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Слово:"
@@ -28,7 +30,7 @@
                 android:layout_marginLeft="10dp"
                 android:id="@+id/word"
                 android:textSize="10pt"
-                android:textColor="@color/black"
+                android:textColor="@color/k1o"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="word"
@@ -41,8 +43,11 @@
             android:orientation="horizontal"
             >
             <TextView
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+
                 android:textSize="10pt"
-                android:textColor="@color/black"
+                android:textColor="@color/ko"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Перевод:"
@@ -51,8 +56,7 @@
                 android:layout_marginLeft="10dp"
                 android:id="@+id/wordt"
                 android:textSize="10pt"
-                android:textColor="@color/black"
-
+                android:textColor="@color/k1o"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="wordt"
@@ -62,7 +66,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.7"
+        android:layout_weight="0.5"
         >
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/mic"

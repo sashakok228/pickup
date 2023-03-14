@@ -49,6 +49,9 @@
             app:startIconDrawable="@drawable/book"
             app:counterEnabled="true"
             app:counterMaxLength="10"
+            app:counterTextColor="@color/Cray"
+            app:boxStrokeColor="@color/Cray"
+            app:hintTextColor="@color/Cray"
             >
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/name_SLOVAR"

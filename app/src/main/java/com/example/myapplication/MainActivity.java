@@ -22,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
     SharedPreferences user;
-    DatabaseReference data_words,data_ds;
+    DatabaseReference data_words,data_ds,data_ds_gt,data_word_gt;
     SQLiteDatabase db1;
 
     @Override
@@ -34,6 +34,24 @@ public class MainActivity extends AppCompatActivity {
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button btn_exit =findViewById(R.id.exit);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button btn_reg =findViewById(R.id.reg);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button btn_user =findViewById(R.id.profil);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button btn_dob =findViewById(R.id.dobav);
+        data_ds_gt=FirebaseDatabase.getInstance().getReference("dictionaries_gt");
+        data_word_gt=FirebaseDatabase.getInstance().getReference("words_gt");
+        btn_dob.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String id=data_ds_gt.push().getKey();
+                Dictionaries_gt gt=new Dictionaries_gt(id,"");
+                data_ds_gt.child(id).setValue(gt);
+                int i=0;
+                while (i!=10){
+                    String id1=data_word_gt.push().getKey();
+                    Words_gt gt1=new Words_gt(id1,id,"","");
+                    data_word_gt.child(id1).setValue(gt1);
+                    i++;
+                }
+            }
+        });
         user=getSharedPreferences("user",MODE_PRIVATE);
         String id=user.getString("id","0");
         if(!id.equals("0")) {

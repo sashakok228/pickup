@@ -32,6 +32,9 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_marginTop="100dp"
         app:startIconDrawable="@drawable/message"
+        app:counterTextColor="@color/Cray"
+        app:boxStrokeColor="@color/Cray"
+        app:hintTextColor="@color/Cray"
         >
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/mail222"
@@ -50,6 +53,9 @@
         android:layout_marginTop="30dp"
         app:startIconDrawable="@drawable/lock"
         app:endIconMode="password_toggle"
+        app:counterTextColor="@color/Cray"
+        app:boxStrokeColor="@color/Cray"
+        app:hintTextColor="@color/Cray"
         >
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/pass222"

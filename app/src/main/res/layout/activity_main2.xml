@@ -41,20 +41,20 @@
             android:layout_gravity="center"
             android:layout_width="300dp"
             android:layout_height="300dp"
-            android:background="@drawable/bigblok1"
+            android:background="@drawable/bigblok2"
             android:orientation="vertical"
             >
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.3"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
                 <LinearLayout
                     android:id="@+id/easy"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.3"
+                    android:background="@drawable/blok"
                     android:orientation="vertical"
                     android:clickable="true"
                     >
@@ -64,21 +64,11 @@
                         android:layout_marginTop="55dp"
                         android:layout_gravity="center"
                         android:textColor="@color/white"
-                        android:textSize="10pt"
+                        android:textSize="25sp"
                         android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                         />
-                    <TextView
-                        android:id="@+id/ea2"
-                        android:text="Лeгко"
-                        android:layout_marginTop="55dp"
-                        android:layout_gravity="center"
-                        android:textColor="@color/orange1"
-                        android:textSize="13pt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:visibility="gone"
-                        />
+
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -90,6 +80,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.3"
+                    android:background="@drawable/blok2"
                     android:orientation="vertical"
                     android:clickable="true"
                     android:id="@+id/sredn"
@@ -100,19 +91,10 @@
                         android:layout_marginTop="55dp"
                         android:layout_gravity="center"
                         android:textColor="@color/white"
-                        android:textSize="10pt"
+                        android:textSize="25sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
-                    <TextView
-                        android:id="@+id/sr2"
-                        android:text="Средний"
-                        android:layout_marginTop="55dp"
-                        android:layout_gravity="center"
-                        android:textColor="@color/orange1"
-                        android:textSize="13pt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:visibility="gone"/>
+
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
@@ -133,6 +115,7 @@
                     android:layout_weight="0.3"
                     android:orientation="vertical"
                     android:clickable="true"
+                    android:background="@drawable/blok3"
                     android:id="@+id/difcl"
                     >
                     <TextView
@@ -141,19 +124,10 @@
                         android:layout_marginTop="55dp"
                         android:layout_gravity="center"
                         android:textColor="@color/white"
-                        android:textSize="10pt"
+                        android:textSize="25sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
-                    <TextView
-                        android:id="@+id/t2"
-                        android:text="Тяжёлый"
-                        android:layout_marginTop="55dp"
-                        android:layout_gravity="center"
-                        android:textColor="@color/orange1"
-                        android:textSize="13pt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:visibility="gone"/>
+
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -168,6 +142,7 @@
                     android:orientation="vertical"
                     android:clickable="true"
                     android:id="@+id/practic"
+                    android:background="@drawable/blok4"
                     >
                     <TextView
                         android:id="@+id/p1"
@@ -175,19 +150,10 @@
                         android:layout_marginTop="55dp"
                         android:layout_gravity="center"
                         android:textColor="@color/white"
-                        android:textSize="10pt"
+                        android:textSize="25sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
-                    <TextView
-                        android:id="@+id/p2"
-                        android:text="Практика"
-                        android:layout_marginTop="55dp"
-                        android:layout_gravity="center"
-                        android:textColor="@color/orange1"
-                        android:textSize="13pt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:visibility="gone"/>
+
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

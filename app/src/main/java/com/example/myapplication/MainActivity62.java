@@ -124,6 +124,9 @@ public class MainActivity62 extends AppCompatActivity {
                         if(dif!=4){
                             time22.cancel();
                         }
+                        if(text.equals("")){
+                            ot[kol[0]]="не ответил";
+                        }
                         perexod(dif,nameSLOVAR,pod,words,transl,kol[0],kol1,ball[0],vop,ot,otprav);
                     }
                 }

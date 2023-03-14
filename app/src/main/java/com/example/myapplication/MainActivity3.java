@@ -21,8 +21,9 @@ public class MainActivity3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
         Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10;
-        TextView txt1,txt2,txt3,txt4,txt5,txt6,txt7,txt8,txt9,txt10;
+        TextView txt1,txt2,txt3,txt4,txt5,txt6,txt7,txt8,txt9,txt10,txtgrust1;
         LinearLayout ln1,ln2,ln3,ln4,ln5,ln6,ln7,ln8,ln9,ln10;
+        txtgrust1=findViewById(R.id.grust1);
         txt1=findViewById(R.id.txt1);
         txt2=findViewById(R.id.txt2);
         txt3=findViewById(R.id.txt3);
@@ -79,9 +80,11 @@ public class MainActivity3 extends AppCompatActivity {
         Cursor cr = read.query(DBHelper.TABLE_SLOVAR, head, null, null, null, null, null);
         int indexID=cr.getColumnIndex(DBHelper.COLUMN_ID);
         int indexNAME=cr.getColumnIndex(DBHelper.COLUMN_NAME);
+        txtgrust1.setVisibility(View.VISIBLE);
         while (cr.moveToNext()) {
             int kolsl=0;
             if (b1 == false) {
+                txtgrust1.setVisibility(View.GONE);
                 Boolean k=false;
                 String n= cr.getString(indexNAME);
                 String name="Словарь: "+n;

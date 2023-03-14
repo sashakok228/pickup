@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -51,72 +52,53 @@ public class MainActivity2 extends AppCompatActivity {
         String[] s={""};
         s[0]=arg.getStringExtra("name");
         final int[] dif = {0};
-        TextView e1=findViewById(R.id.ea1);
-        TextView e2=findViewById(R.id.ea2);
-        TextView sr1=findViewById(R.id.sr1);
-        TextView sr2=findViewById(R.id.sr2);
-        TextView t1=findViewById(R.id.t1);
-        TextView t2=findViewById(R.id.t2);
-        TextView p1=findViewById(R.id.p1);
-        TextView p2=findViewById(R.id.p2);
         LinearLayout eas=findViewById(R.id.easy);
         LinearLayout srd=findViewById(R.id.sredn);
         LinearLayout d=findViewById(R.id.difcl);
         LinearLayout prac=findViewById(R.id.practic);
         eas.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View view) {
                 dif[0]=1;
-                e1.setVisibility(View.GONE);
-                e2.setVisibility(View.VISIBLE);
-                sr1.setVisibility(View.VISIBLE);
-                sr2.setVisibility(View.GONE);
-                t1.setVisibility(View.VISIBLE);
-                t2.setVisibility(View.GONE);
-                p1.setVisibility(View.VISIBLE);
-                p2.setVisibility(View.GONE);
+                eas.setBackground(getDrawable(R.drawable.blokc1));
+                srd.setBackground(getDrawable(R.drawable.blok2));
+                d.setBackground(getDrawable(R.drawable.blok3));
+                prac.setBackground(getDrawable(R.drawable.blok4));
             }
         });
         srd.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View view) {
                 dif[0]=2;
-                e1.setVisibility(View.VISIBLE);
-                e2.setVisibility(View.GONE);
-                sr1.setVisibility(View.GONE);
-                sr2.setVisibility(View.VISIBLE);
-                t1.setVisibility(View.VISIBLE);
-                t2.setVisibility(View.GONE);
-                p1.setVisibility(View.VISIBLE);
-                p2.setVisibility(View.GONE);
+                eas.setBackground(getDrawable(R.drawable.blok));
+                srd.setBackground(getDrawable(R.drawable.blokc2));
+                d.setBackground(getDrawable(R.drawable.blok3));
+                prac.setBackground(getDrawable(R.drawable.blok4));
             }
         });
         d.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 dif[0]=3;
-                e1.setVisibility(View.VISIBLE);
-                e2.setVisibility(View.GONE);
-                sr1.setVisibility(View.VISIBLE);
-                sr2.setVisibility(View.GONE);
-                t1.setVisibility(View.GONE);
-                t2.setVisibility(View.VISIBLE);
-                p1.setVisibility(View.VISIBLE);
-                p2.setVisibility(View.GONE);
+                eas.setBackground(getDrawable(R.drawable.blok));
+                srd.setBackground(getDrawable(R.drawable.blok2));
+                d.setBackground(getDrawable(R.drawable.blokc3));
+                prac.setBackground(getDrawable(R.drawable.blok4));
             }
         });
         prac.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceAsColor")
+
             @Override
             public void onClick(View view) {
                 dif[0]=4;
-                e1.setVisibility(View.VISIBLE);
-                e2.setVisibility(View.GONE);
-                sr1.setVisibility(View.VISIBLE);
-                sr2.setVisibility(View.GONE);
-                t1.setVisibility(View.VISIBLE);
-                t2.setVisibility(View.GONE);
-                p1.setVisibility(View.GONE);
-                p2.setVisibility(View.VISIBLE);
+                eas.setBackground(getDrawable(R.drawable.blok));
+                srd.setBackground(getDrawable(R.drawable.blok2));
+                d.setBackground(getDrawable(R.drawable.blok3));
+                prac.setBackground(getDrawable(R.drawable.blokc4));
             }
         });
         final Boolean[] pods = {false};
