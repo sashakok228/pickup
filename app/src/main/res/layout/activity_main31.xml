@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity31"
+    android:background="@drawable/tema"
+
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="70dp"
             app:startIconDrawable="@drawable/book"
             app:counterEnabled="true"
             app:counterMaxLength="10"

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/tema"
     tools:context=".loginActivity">
 <LinearLayout
     android:layout_width="match_parent"
@@ -73,7 +74,7 @@
             android:layout_height="55dp"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
-            android:background="@drawable/perevodsam"
+            android:background="@drawable/nazad"
             android:fontFamily="@font/ubuntu"
             android:lineHeight="23sp"
             android:text="Войти"
