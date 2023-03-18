@@ -25,13 +25,17 @@
         android:layout_marginLeft="35dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/auth" />
-
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_marginTop="100dp"
         app:startIconDrawable="@drawable/message"
         app:counterTextColor="@color/Cray"
         app:boxStrokeColor="@color/Cray"
@@ -45,13 +49,18 @@
             android:hint="Email"
             />
     </com.google.android.material.textfield.TextInputLayout>
-
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_marginTop="30dp"
         app:startIconDrawable="@drawable/lock"
         app:endIconMode="password_toggle"
         app:counterTextColor="@color/Cray"
@@ -67,7 +76,7 @@
             android:inputType="textPassword"
             />
     </com.google.android.material.textfield.TextInputLayout>
-
+    </LinearLayout>
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/auth"
             android:layout_width="250dp"
