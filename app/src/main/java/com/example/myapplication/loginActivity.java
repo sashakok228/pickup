@@ -6,7 +6,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -22,7 +21,6 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 public class loginActivity extends AppCompatActivity {
@@ -42,6 +40,8 @@ public class loginActivity extends AppCompatActivity {
         mail1=findViewById(R.id.mail222);
         pass1=findViewById(R.id.pass222);
         btn_reg=findViewById(R.id.auth);
+        Intent g=getIntent();
+        Boolean naz=g.getBooleanExtra("start",false);
         btn_nazad=findViewById(R.id.nazad2343);
         DBHelper sqlHelper1 = new DBHelper(getApplicationContext());
         db1 = sqlHelper1.getWritableDatabase();
@@ -92,9 +92,15 @@ public class loginActivity extends AppCompatActivity {
         btn_nazad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(i);
-                finish();
+                if(naz==true){
+                    Intent i = new Intent(getApplicationContext(),StartaActivity.class);
+                    startActivity(i);
+                    finish();
+                }else {
+                    Intent i = new Intent(getApplicationContext(),MainActivity.class);
+                    startActivity(i);
+                    finish();
+                }
             }
         });
 

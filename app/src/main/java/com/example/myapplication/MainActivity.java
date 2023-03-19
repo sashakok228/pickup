@@ -53,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         user=getSharedPreferences("user",MODE_PRIVATE);
+        Boolean board=user.getBoolean("board",false);
+        if(board==false){
+            Intent k = new Intent(getApplicationContext(),OnBoardActivity.class);
+            startActivity(k);
+            finish();
+        }
         String id=user.getString("id","0");
         if(!id.equals("0")) {
             DBHelper sqlHelper1 = new DBHelper(getApplicationContext());
@@ -128,7 +134,36 @@ public class MainActivity extends AppCompatActivity {
         btn_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                if(id.equals("0")){
+                    Intent o=new Intent(getApplicationContext(),StartaActivity.class);
+                    startActivity(o);
+                    finish();
+                }else {
+                    Intent o=new Intent(getApplicationContext(),StartaActivity.class);
+                    SharedPreferences.Editor edt=user.edit();
+                    edt.remove("id").commit();
+                    edt.remove("name").commit();
+                    edt.remove("mail").commit();
+                    edt.remove("pass").commit();
+                    String [] head = {DBHelper.COLUMN_ID};
+                    Cursor cr1=db1.query(DBHelper.TABLE_SLOVAR,head,null,null,null,null,null);
+                    int indexID=cr1.getColumnIndex(DBHelper.COLUMN_ID);
+                    Cursor cr2=db1.query(DBHelper.TABLE_SLOVAR1,head,null,null,null,null,null);
+                    int indexID1=cr2.getColumnIndex(DBHelper.COLUMN_ID);
+                    while (cr1.moveToNext()){
+                        int id=cr1.getInt(indexID);
+                        db1.delete(DBHelper.TABLE_SLOVAR,"id= ?",new String[]{String.valueOf(id)});
+                    }
+                    while (cr2.moveToNext()){
+                        int id=cr2.getInt(indexID1);
+                        db1.delete(DBHelper.TABLE_SLOVAR1,"id= ?",new String[]{String.valueOf(id)});
+                    }
+                    Intent i=new Intent(getApplicationContext(),MainActivity.class);
+                    startActivity(i);
+                    finish();
+                    startActivity(o);
+                    finish();
+                }
             }
         });
         if(id=="0"){

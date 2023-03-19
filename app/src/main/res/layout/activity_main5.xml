@@ -59,7 +59,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:startIconDrawable="@drawable/book"
         app:counterEnabled="true"
-        app:counterMaxLength="10"
+        app:counterMaxLength="15"
         app:counterTextColor="@color/Cray"
         app:boxStrokeColor="@color/Cray"
         app:hintTextColor="@color/Cray"
@@ -70,7 +70,7 @@
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:maxLength="10"
+            android:maxLength="15"
             android:hint="Имя словаря"
             />
     </com.google.android.material.textfield.TextInputLayout>

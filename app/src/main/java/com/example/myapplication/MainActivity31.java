@@ -50,7 +50,7 @@ public class MainActivity31 extends AppCompatActivity {
             public void onClick(View view) {
                 ContentValues cv = new ContentValues();
                 String ns=naSl.getText().toString();
-                Boolean prva=ns.matches("[а-яёА-ЯЁa-zA-Z]{1,10}+");
+                Boolean prva=ns.matches("[а-яёА-ЯЁa-zA-Z]+");
                 String [] headprover={DBHelper.COLUMN_NAME};
                 Cursor provercr=dbRead.query(DBHelper.TABLE_SLOVAR,headprover,null,null,null,null,null);
                 int indexname=provercr.getColumnIndex(DBHelper.COLUMN_NAME);

@@ -30,6 +30,8 @@ public class activity_regestr extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_regestr);
         p2=true;
+        Intent g=getIntent();
+        Boolean naz=g.getBooleanExtra("start",false);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) EditText mailEDT=findViewById(R.id.mail2);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) EditText nameEDT=findViewById(R.id.name2);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) EditText passEDT=findViewById(R.id.pass2);
@@ -49,9 +51,15 @@ public class activity_regestr extends AppCompatActivity {
         btn_nazad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent nazad=new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(nazad);
-                finish();
+                if(naz==true){
+                    Intent nazad = new Intent(getApplicationContext(), StartaActivity.class);
+                    startActivity(nazad);
+                    finish();
+                }else {
+                    Intent nazad = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(nazad);
+                    finish();
+                }
             }
         });
         btn_reg.setOnClickListener(new View.OnClickListener() {

@@ -22,7 +22,6 @@ public class user_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
         user=getSharedPreferences("user",MODE_PRIVATE);
-        btn_exit=findViewById(R.id.exit_user);
         btn_nazad=findViewById(R.id.nazad23433);
         user_mail=findViewById(R.id.mail_user);
         user_name=findViewById(R.id.name_user);
@@ -38,31 +37,6 @@ public class user_activity extends AppCompatActivity {
                 finish();
             }
         });
-        btn_exit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                SharedPreferences.Editor edt=user.edit();
-                edt.remove("id").commit();
-                edt.remove("name").commit();
-                edt.remove("mail").commit();
-                edt.remove("pass").commit();
-                String [] head = {DBHelper.COLUMN_ID};
-                Cursor cr1=db1.query(DBHelper.TABLE_SLOVAR,head,null,null,null,null,null);
-                int indexID=cr1.getColumnIndex(DBHelper.COLUMN_ID);
-                Cursor cr2=db1.query(DBHelper.TABLE_SLOVAR1,head,null,null,null,null,null);
-                int indexID1=cr2.getColumnIndex(DBHelper.COLUMN_ID);
-                while (cr1.moveToNext()){
-                    int id=cr1.getInt(indexID);
-                    db1.delete(DBHelper.TABLE_SLOVAR,"id= ?",new String[]{String.valueOf(id)});
-                }
-                while (cr2.moveToNext()){
-                    int id=cr2.getInt(indexID1);
-                    db1.delete(DBHelper.TABLE_SLOVAR1,"id= ?",new String[]{String.valueOf(id)});
-                }
-                Intent i=new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(i);
-                finish();
-            }
-        });
+
     }
 }

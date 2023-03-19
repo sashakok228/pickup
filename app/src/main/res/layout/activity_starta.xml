@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartaActivity"
+    android:background="@drawable/tema"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:textSize="25pt"
+        android:textColor="@color/black"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:id="@+id/pick_up"
+        android:layout_width="250dp"
+        android:layout_height="67dp"
+        android:fontFamily="@font/ubuntu"
+        android:gravity="center_horizontal|top"
+        android:lineHeight="57sp"
+        android:text="@string/pick_up"
+
+        />
+
+<androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/ath"
+    android:layout_marginTop="150dp"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/nazad"
+    android:text="Авторизация"
+    android:textAppearance="@style/dobavit"
+    android:fontFamily="@font/ubuntu"
+    android:textColor="@color/white"
+    />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/reg"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nazad"
+        android:text="Регестрация"
+        android:textAppearance="@style/dobavit"
+        android:fontFamily="@font/ubuntu"
+        android:textColor="@color/white"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/goust"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nazad"
+        android:text="Гость"
+        android:textAppearance="@style/dobavit"
+        android:fontFamily="@font/ubuntu"
+        android:textColor="@color/white"
+        />
+</LinearLayout>
