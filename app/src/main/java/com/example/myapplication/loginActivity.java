@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +13,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -28,8 +26,7 @@ public class loginActivity extends AppCompatActivity {
     Button btn_reg,btn_nazad;
     DatabaseReference data,data1,data_ds,data_words;
     SharedPreferences user;
-    TextView dan;
-    int kol,kol1;
+
     Boolean pr;
     SQLiteDatabase db1;
     @Override
@@ -92,15 +89,9 @@ public class loginActivity extends AppCompatActivity {
         btn_nazad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(naz==true){
                     Intent i = new Intent(getApplicationContext(),StartaActivity.class);
                     startActivity(i);
                     finish();
-                }else {
-                    Intent i = new Intent(getApplicationContext(),MainActivity.class);
-                    startActivity(i);
-                    finish();
-                }
             }
         });
 

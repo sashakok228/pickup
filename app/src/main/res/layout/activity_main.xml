@@ -78,7 +78,9 @@
             android:layout_height="55dp"
             android:text="Регистрация/авторизация"
             android:lineHeight="53sp"
-            android:background="@drawable/some_id1" />
+            android:background="@drawable/some_id1"
+            android:visibility="gone"
+            />
         <androidx.appcompat.widget.AppCompatButton
             android:textAppearance="@style/dobavit"
             android:fontFamily="@font/ubuntu"
@@ -90,7 +92,9 @@
             android:layout_height="55dp"
             android:text="Ваш аккаунт"
             android:lineHeight="53sp"
-            android:background="@drawable/some_id1" />
+            android:background="@drawable/some_id1"
+            android:visibility="gone"
+            />
 
         <androidx.appcompat.widget.AppCompatButton
             android:textAppearance="@style/dobavit"

@@ -98,14 +98,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
-        Intent reg = new Intent(getApplicationContext(), activity_regestr.class);
-        btn_reg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(reg);
-                finish();
-            }
-        });
+        //Intent reg = new Intent(getApplicationContext(), activity_regestr.class);
+        //btn_reg.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+        //    public void onClick(View view) {
+        //        startActivity(reg);
+        //        finish();
+        //    }
+        //});
         Intent play=new Intent(getApplicationContext(),MainActivity3.class);
         btn_play.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,14 +123,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(edtSlovar);
             }
         });
-        btn_user.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent it=new Intent(getApplicationContext(),user_activity.class);
-                startActivity(it);
-                finish();
-            }
-        });
+        //btn_user.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+        //    public void onClick(View view) {
+        //        Intent it=new Intent(getApplicationContext(),user_activity.class);
+        //        startActivity(it);
+        //        finish();
+        //    }
+        //});
         btn_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -166,13 +166,13 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        if(id=="0"){
-            btn_reg.setVisibility(View.VISIBLE);
-            btn_user.setVisibility(View.GONE);
-        }else {
-            btn_reg.setVisibility(View.GONE);
-            btn_user.setVisibility(View.VISIBLE);
-        }
+        //if(id=="0"){
+        //    btn_reg.setVisibility(View.VISIBLE);
+        //    btn_user.setVisibility(View.GONE);
+        //}else {
+        //    btn_reg.setVisibility(View.GONE);
+        //    btn_user.setVisibility(View.VISIBLE);
+        //}
 
     }
     void zap(String idF){

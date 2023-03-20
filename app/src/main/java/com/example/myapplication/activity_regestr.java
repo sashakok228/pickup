@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -14,8 +13,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -51,15 +48,9 @@ public class activity_regestr extends AppCompatActivity {
         btn_nazad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(naz==true){
                     Intent nazad = new Intent(getApplicationContext(), StartaActivity.class);
                     startActivity(nazad);
                     finish();
-                }else {
-                    Intent nazad = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(nazad);
-                    finish();
-                }
             }
         });
         btn_reg.setOnClickListener(new View.OnClickListener() {

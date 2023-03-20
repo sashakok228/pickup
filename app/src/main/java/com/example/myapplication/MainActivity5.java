@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
@@ -36,6 +37,7 @@ public class MainActivity5 extends AppCompatActivity {
     SharedPreferences user;
     DatabaseReference data_ds;
     DatabaseReference data_word;
+    LinearLayout ln133;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -49,6 +51,7 @@ public class MainActivity5 extends AppCompatActivity {
         String name4=arg.getStringExtra("name");
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) EditText txtname=findViewById(R.id.name_SLOVAR);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) View visibl=findViewById(R.id.visb);
+        ln133=findViewById(R.id.ln13);
         txtname.setText(name4);
         DBHelper sqlHelper = new DBHelper(this);
         SQLiteDatabase db = sqlHelper.getWritableDatabase();
@@ -112,13 +115,15 @@ public class MainActivity5 extends AppCompatActivity {
                     perevod3[0] = false;
                     perevod.setVisibility(View.VISIBLE);
                     visibl.setVisibility(View.VISIBLE);
+                    ln133.setVisibility(View.VISIBLE);
                     btntrans.setText("Использовать переводчик");
                 }else {
                     perevod2[0] = true;
                     perevod3[0] = true;
                     perevod.setVisibility(View.GONE);
                     visibl.setVisibility(View.GONE);
-                    btntrans.setText("Ввести самому перевод слово");
+                    ln133.setVisibility(View.GONE);
+                    btntrans.setText("Ввести свой перевод");
                 }
             }
         });

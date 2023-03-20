@@ -17,7 +17,7 @@
         android:id="@+id/nazad72424"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background="@drawable/left"
+        android:background="@drawable/strelka"
         />
     <TextView
         android:id="@+id/some_id"
@@ -47,11 +47,28 @@
 
         />
     <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.99"
+            ></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.30"
+            android:orientation="vertical"
+            >
+    <LinearLayout
         android:background="@color/white"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,7 +84,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/name_SLOVAR"
-            android:layout_width="280dp"
+            android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:maxLength="15"
@@ -75,24 +92,37 @@
             />
     </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.99"
+            ></LinearLayout>
+    </LinearLayout>
 <LinearLayout
+    android:layout_marginTop="20dp"
     android:layout_width="match_parent"
     android:layout_height="80dp"
     >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.98"
+        android:layout_weight="0.99"
         ></LinearLayout>
     <LinearLayout
-        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.33"
+        android:layout_weight="0.30"
         android:orientation="vertical"
         >
+        <LinearLayout
+            android:layout_margin="4dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            >
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -104,21 +134,20 @@
             >
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/wordADD"
-                android:layout_width="280dp"
+                android:layout_width="270dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:hint="Слово для добавление"
                 />
         </com.google.android.material.textfield.TextInputLayout>
-
+        </LinearLayout>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.98"
+        android:layout_weight="0.99"
         >
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_marginTop="5dp"
             android:layout_marginLeft="5dp"
             android:layout_gravity="center"
             android:id="@+id/btnADDword"
@@ -129,15 +158,31 @@
             android:fontFamily="@font/ubuntu"
             android:lineHeight="53sp"
             android:textColor="@color/white"
-            android:background="@drawable/dobavword"
+            android:background="@drawable/plus1"
             />
     </LinearLayout>
 </LinearLayout>
-
+    <LinearLayout
+        android:id="@+id/ln13"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:visibility="gone"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.99"
+            ></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.30"
+            android:orientation="vertical"
+            >
     <LinearLayout
         android:background="@color/white"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
     <com.google.android.material.textfield.TextInputLayout
@@ -154,7 +199,7 @@
         >
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/perevod"
-            android:layout_width="280dp"
+            android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:hint="Перевод слово"
@@ -162,13 +207,20 @@
             />
     </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.99"
+            ></LinearLayout>
+    </LinearLayout>
     <androidx.appcompat.widget.AppCompatButton
         android:layout_marginTop="15dp"
         android:layout_gravity="center"
         android:id="@+id/trans"
-        android:layout_width="220dp"
+        android:layout_width="275dp"
         android:layout_height="55dp"
-        android:textSize="9pt"
+        android:textSize="20sp"
         android:text="Ввести свой перевод"
         android:textAppearance="@style/save"
         android:fontFamily="@font/ubuntu"
@@ -185,6 +237,7 @@
         android:layout_width="275dp"
         android:layout_height="55dp"
         android:text="@string/save"
+        android:textSize="20sp"
         android:textAppearance="@style/save"
         android:fontFamily="@font/ubuntu"
         android:lineHeight="53sp"
