@@ -104,17 +104,22 @@
 
             />
         </LinearLayout>
+
         <androidx.appcompat.widget.AppCompatButton
-            android:textColor="@color/white"
+            android:textAppearance="@style/dobavit"
+            android:fontFamily="@font/ubuntu"
             android:id="@+id/start23"
-            android:layout_marginTop="100dp"
-            android:layout_gravity="center"
             android:layout_width="275dp"
             android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
             android:background="@drawable/sledslovo"
             android:text="@string/sledsl"
-             />
+            android:textColor="@color/white" />
+
         <androidx.appcompat.widget.AppCompatButton
+            android:textAppearance="@style/dobavit"
+            android:fontFamily="@font/ubuntu"
             android:textColor="@color/white"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"

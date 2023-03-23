@@ -189,6 +189,8 @@
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:textAppearance="@style/dobavit"
+            android:fontFamily="@font/ubuntu"
             android:textColor="@color/white"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
