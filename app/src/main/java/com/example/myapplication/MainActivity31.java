@@ -28,6 +28,7 @@ public class MainActivity31 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main31);
         Button btnN=findViewById(R.id.nazad);
+        TextView btnds=findViewById(R.id.cuct);
         DBHelper sqlHelper = new DBHelper(this);
         SQLiteDatabase db = sqlHelper.getWritableDatabase();
         SQLiteDatabase dbRead = sqlHelper.getReadableDatabase();
@@ -35,6 +36,17 @@ public class MainActivity31 extends AppCompatActivity {
         user=getSharedPreferences("user",MODE_PRIVATE);
         String id4=user.getString("id","0");
         Intent naz = new Intent(getApplicationContext(), MainActivity32.class);
+        Intent gtds= new Intent(getApplicationContext(),GtdsActivity.class);
+        if(id4.equals("0")) {
+            btnds.setVisibility(View.GONE);
+        }
+        btnds.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(gtds);
+                finish();
+            }
+        });
         btnN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
