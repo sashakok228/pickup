@@ -104,11 +104,29 @@ public class MainActivity3 extends AppCompatActivity {
                 if(kolsl!=0){
                     k=true;
                 }
-                String name1 = name + "\n Кол-во слов: " + kolsl;
+                String name1 = name + "\nКол-во слов: " + kolsl;
                 txt1.setText(name1);
                 ln1.setVisibility(View.VISIBLE);
                 if(k==true) {
                     btn1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                            i.putExtra("name", n);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    ln1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                            i.putExtra("name", n);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    txt1.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             Intent i = new Intent(getApplicationContext(), MainActivity2.class);
@@ -146,11 +164,29 @@ public class MainActivity3 extends AppCompatActivity {
                 if(kolsl!=0){
                     k=true;
                 }
-                String name1 = name + "\n Кол-во слов: " + kolsl;
+                String name1 = name + "\nКол-во слов: " + kolsl;
                 txt2.setText(name1);
                 ln2.setVisibility(View.VISIBLE);
                 if(k==true) {
                     btn2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                            i.putExtra("name", n);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    ln2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                            i.putExtra("name", n);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    txt2.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             Intent i = new Intent(getApplicationContext(), MainActivity2.class);
@@ -188,11 +224,29 @@ public class MainActivity3 extends AppCompatActivity {
                 if(kolsl!=0){
                     k=true;
                 }
-                String name1 = name + "\n Кол-во слов: " + kolsl;
+                String name1 = name + "\nКол-во слов: " + kolsl;
                 txt3.setText(name1);
                 ln3.setVisibility(View.VISIBLE);
                 if(k==true) {
                     btn3.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                            i.putExtra("name", n);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    ln3.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                            i.putExtra("name", n);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    txt3.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             Intent i = new Intent(getApplicationContext(), MainActivity2.class);
@@ -230,11 +284,29 @@ public class MainActivity3 extends AppCompatActivity {
                 if(kolsl!=0){
                     k=true;
                 }
-                String name1 = name + "\n Кол-во слов: " + kolsl;
+                String name1 = name + "\nКол-во слов: " + kolsl;
                 txt4.setText(name1);
                 ln4.setVisibility(View.VISIBLE);
                 if(k==true) {
                     btn4.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                            i.putExtra("name", n);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    ln4.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                            i.putExtra("name", n);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    txt4.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             Intent i = new Intent(getApplicationContext(), MainActivity2.class);
@@ -272,11 +344,29 @@ public class MainActivity3 extends AppCompatActivity {
                 if(kolsl!=0){
                     k=true;
                 }
-                String name1 = name + "\n Кол-во слов: " + kolsl;
+                String name1 = name + "\nКол-во слов: " + kolsl;
                 txt5.setText(name1);
                 ln5.setVisibility(View.VISIBLE);
                 if(k==true) {
                     btn5.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                            i.putExtra("name", n);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    ln5.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                            i.putExtra("name", n);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    txt5.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             Intent i = new Intent(getApplicationContext(), MainActivity2.class);
@@ -314,11 +404,29 @@ public class MainActivity3 extends AppCompatActivity {
                 if(kolsl!=0){
                     k=true;
                 }
-                String name1 = name + "\n Кол-во слов: " + kolsl;
+                String name1 = name + "\nКол-во слов: " + kolsl;
                 txt6.setText(name1);
                 ln6.setVisibility(View.VISIBLE);
                 if(k==true) {
                     btn6.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                            i.putExtra("name", n);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    ln6.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                            i.putExtra("name", n);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    txt6.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             Intent i = new Intent(getApplicationContext(), MainActivity2.class);
@@ -356,7 +464,7 @@ public class MainActivity3 extends AppCompatActivity {
                 if(kolsl!=0){
                     k=true;
                 }
-                String name1 = name + "\n Кол-во слов: " + kolsl;
+                String name1 = name + "\nКол-во слов: " + kolsl;
                 txt7.setText(name1);
                 ln7.setVisibility(View.VISIBLE);
                 if(k==true) {
@@ -365,6 +473,24 @@ public class MainActivity3 extends AppCompatActivity {
                         public void onClick(View view) {
                             Intent i = new Intent(getApplicationContext(), MainActivity2.class);
                             i.putExtra("name",n);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    ln7.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                            i.putExtra("name", n);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    txt7.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                            i.putExtra("name", n);
                             startActivity(i);
                             finish();
                         }
@@ -396,11 +522,29 @@ public class MainActivity3 extends AppCompatActivity {
                 if(kolsl!=0){
                     k=true;
                 }
-                String name1 = name + "\n Кол-во слов: " + kolsl;
+                String name1 = name + "\nКол-во слов: " + kolsl;
                 txt8.setText(name1);
                 ln8.setVisibility(View.VISIBLE);
                 if(k==true) {
                     btn8.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                            i.putExtra("name", n);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    ln8.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                            i.putExtra("name", n);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    txt8.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             Intent i = new Intent(getApplicationContext(), MainActivity2.class);
@@ -438,11 +582,29 @@ public class MainActivity3 extends AppCompatActivity {
                 if(kolsl!=0){
                     k=true;
                 }
-                String name1 = name + "\n Кол-во слов: " + kolsl;
+                String name1 = name + "\nКол-во слов: " + kolsl;
                 txt9.setText(name1);
                 ln9.setVisibility(View.VISIBLE);
                 if(k==true) {
                     btn9.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                            i.putExtra("name", n);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    ln9.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                            i.putExtra("name", n);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    txt9.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             Intent i = new Intent(getApplicationContext(), MainActivity2.class);
@@ -480,7 +642,7 @@ public class MainActivity3 extends AppCompatActivity {
                 if(kolsl!=0){
                     k=true;
                 }
-                String name1 = name + "\n Кол-во слов: " + kolsl;
+                String name1 = name + "\nКол-во слов: " + kolsl;
                 txt10.setText(name1);
                 ln10.setVisibility(View.VISIBLE);
                 if(k==true) {
@@ -489,6 +651,24 @@ public class MainActivity3 extends AppCompatActivity {
                         public void onClick(View view) {
                             Intent i = new Intent(getApplicationContext(), MainActivity2.class);
                             i.putExtra("name",n);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    ln10.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                            i.putExtra("name", n);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    txt10.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                            i.putExtra("name", n);
                             startActivity(i);
                             finish();
                         }

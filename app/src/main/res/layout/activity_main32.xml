@@ -756,7 +756,7 @@
             android:layout_gravity="center|top"
             android:id="@+id/dobaslov"
             android:layout_width="360dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:background="@drawable/dobav"
             android:paddingBottom="15dp"
             />

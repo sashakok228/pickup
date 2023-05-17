@@ -502,7 +502,7 @@ public class MainActivity63 extends AppCompatActivity {
         return random;
     }
         void perexod ( int dif,String name, Boolean pod, String[] words, String[] transl, int kol, int kol1, int ball, String[]vopros,String[]otvet,String[] otvetprav){
-            int ran = (int) (Math.random() * 4) + 1;
+            int ran = 4;
             if (ran == 1) {
                 Intent sl = new Intent(getApplicationContext(), MainActivity61.class);
                 sl.putExtra("dif", dif);

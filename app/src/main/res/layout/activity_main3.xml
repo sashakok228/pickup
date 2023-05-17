@@ -79,28 +79,29 @@
                 android:layout_height="100dp"
                 android:orientation="horizontal"
                 android:background="@drawable/rectangle_1"
+                android:clickable="true"
                 >
                 <TextView
                     android:textColor="@color/white"
                     android:id="@+id/txt1"
-                    android:textAlignment="center"
                     android:lineHeight="29sp"
                     android:textAppearance="@style/slovarglag"
                     android:fontFamily="@font/ubuntu"
-                    android:layout_width="260dp"
+                    android:layout_width="210dp"
+                    android:textSize="24sp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:clickable="true"
                     />
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn1slov"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_marginRight="20dp"
                 android:alpha="0.7"
                 android:background="@drawable/play"
                 android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="25dp"
                />
 
             </LinearLayout>
@@ -112,18 +113,20 @@
                 android:layout_height="100dp"
                 android:orientation="horizontal"
                 android:background="@drawable/rectangle_1"
+                android:clickable="true"
                 >
                 <TextView
                     android:textColor="@color/white"
                     android:id="@+id/txt2"
-                    android:textAlignment="center"
                     android:lineHeight="29sp"
                     android:textAppearance="@style/slovarglag"
                     android:fontFamily="@font/ubuntu"
-                    android:layout_width="260dp"
+                    android:textSize="24sp"
+                    android:layout_width="210dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:clickable="true"
                     />
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn2slov"
@@ -132,8 +135,7 @@
                     android:alpha="0.7"
                     android:background="@drawable/play"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="25dp"
                     />
 
             </LinearLayout>
@@ -145,18 +147,20 @@
                 android:layout_height="100dp"
                 android:orientation="horizontal"
                 android:background="@drawable/rectangle_1"
+                android:clickable="true"
                 >
                 <TextView
                     android:textColor="@color/white"
                     android:id="@+id/txt3"
-                    android:textAlignment="center"
                     android:lineHeight="29sp"
                     android:textAppearance="@style/slovarglag"
                     android:fontFamily="@font/ubuntu"
-                    android:layout_width="260dp"
+                    android:textSize="24sp"
+                    android:layout_width="210dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:clickable="true"
                     />
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn3slov"
@@ -165,8 +169,7 @@
                     android:alpha="0.7"
                     android:background="@drawable/play"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="25dp"
                     />
 
             </LinearLayout>
@@ -178,18 +181,20 @@
                 android:layout_height="100dp"
                 android:orientation="horizontal"
                 android:background="@drawable/rectangle_1"
+                android:clickable="true"
                 >
                 <TextView
                     android:textColor="@color/white"
                     android:id="@+id/txt4"
-                    android:textAlignment="center"
                     android:lineHeight="29sp"
                     android:textAppearance="@style/slovarglag"
                     android:fontFamily="@font/ubuntu"
-                    android:layout_width="260dp"
+                    android:layout_width="210dp"
+                    android:textSize="24sp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:clickable="true"
                     />
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn4slov"
@@ -198,8 +203,7 @@
                     android:alpha="0.7"
                     android:background="@drawable/play"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="25dp"
                     />
 
             </LinearLayout>
@@ -211,18 +215,20 @@
                 android:layout_height="100dp"
                 android:orientation="horizontal"
                 android:background="@drawable/rectangle_1"
+                android:clickable="true"
                 >
                 <TextView
                     android:textColor="@color/white"
                     android:id="@+id/txt5"
-                    android:textAlignment="center"
                     android:lineHeight="29sp"
                     android:textAppearance="@style/slovarglag"
                     android:fontFamily="@font/ubuntu"
-                    android:layout_width="260dp"
+                    android:textSize="24sp"
+                    android:layout_width="210dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:clickable="true"
                     />
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn5slov"
@@ -231,8 +237,7 @@
                     android:alpha="0.7"
                     android:background="@drawable/play"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="25dp"
                     />
 
             </LinearLayout>
@@ -244,18 +249,20 @@
                 android:layout_height="100dp"
                 android:orientation="horizontal"
                 android:background="@drawable/rectangle_1"
+                android:clickable="true"
                 >
                 <TextView
                     android:textColor="@color/white"
                     android:id="@+id/txt6"
-                    android:textAlignment="center"
                     android:lineHeight="29sp"
                     android:textAppearance="@style/slovarglag"
                     android:fontFamily="@font/ubuntu"
-                    android:layout_width="260dp"
+                    android:textSize="24sp"
+                    android:layout_width="210dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:clickable="true"
                     />
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn6slov"
@@ -264,8 +271,7 @@
                     android:alpha="0.7"
                     android:background="@drawable/play"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="25dp"
                     />
 
             </LinearLayout>
@@ -277,18 +283,20 @@
                 android:layout_height="100dp"
                 android:orientation="horizontal"
                 android:background="@drawable/rectangle_1"
+                android:clickable="true"
                 >
                 <TextView
                     android:textColor="@color/white"
                     android:id="@+id/txt7"
-                    android:textAlignment="center"
                     android:lineHeight="29sp"
+                    android:textSize="24sp"
                     android:textAppearance="@style/slovarglag"
                     android:fontFamily="@font/ubuntu"
-                    android:layout_width="260dp"
+                    android:layout_width="210dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:clickable="true"
                     />
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn7slov"
@@ -297,8 +305,7 @@
                     android:alpha="0.7"
                     android:background="@drawable/play"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="25dp"
                     />
 
             </LinearLayout>
@@ -310,18 +317,20 @@
                 android:layout_height="100dp"
                 android:orientation="horizontal"
                 android:background="@drawable/rectangle_1"
+                android:clickable="true"
                 >
                 <TextView
                     android:textColor="@color/white"
                     android:id="@+id/txt8"
-                    android:textAlignment="center"
                     android:lineHeight="29sp"
+                    android:textSize="24sp"
                     android:textAppearance="@style/slovarglag"
                     android:fontFamily="@font/ubuntu"
-                    android:layout_width="260dp"
+                    android:layout_width="210dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:clickable="true"
                     />
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn8slov"
@@ -330,8 +339,7 @@
                     android:alpha="0.7"
                     android:background="@drawable/play"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="25dp"
                     />
 
             </LinearLayout>
@@ -343,18 +351,20 @@
                 android:layout_height="100dp"
                 android:orientation="horizontal"
                 android:background="@drawable/rectangle_1"
+                android:clickable="true"
                 >
                 <TextView
                     android:textColor="@color/white"
                     android:id="@+id/txt9"
-                    android:textAlignment="center"
                     android:lineHeight="29sp"
+                    android:textSize="24sp"
                     android:textAppearance="@style/slovarglag"
                     android:fontFamily="@font/ubuntu"
-                    android:layout_width="260dp"
+                    android:layout_width="210dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:clickable="true"
                     />
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn9slov"
@@ -363,8 +373,7 @@
                     android:alpha="0.7"
                     android:background="@drawable/play"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="25dp"
                     />
 
             </LinearLayout>
@@ -376,18 +385,20 @@
                 android:layout_height="100dp"
                 android:orientation="horizontal"
                 android:background="@drawable/rectangle_1"
+                android:clickable="true"
                 >
                 <TextView
                     android:textColor="@color/white"
                     android:id="@+id/txt10"
-                    android:textAlignment="center"
                     android:lineHeight="29sp"
+                    android:textSize="24sp"
                     android:textAppearance="@style/slovarglag"
                     android:fontFamily="@font/ubuntu"
-                    android:layout_width="260dp"
+                    android:layout_width="210dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:clickable="true"
                     />
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn10slov"
@@ -396,8 +407,7 @@
                     android:alpha="0.7"
                     android:background="@drawable/play"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="25dp"
                     />
 
             </LinearLayout>
